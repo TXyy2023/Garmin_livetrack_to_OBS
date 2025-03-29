@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Transparent Overlay</title>
+</head>
+<body>
+    <link href="{{ url_for('static', filename='css/index.css') }}" rel="stylesheet">
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+    <div class="corner-text top-left" id="speed">Speed: 0 km/h</div>
+    <div class="corner-text top-right" id="heart_rate">Heart Rate: 0 bpm</div>
+    <div class="corner-text bottom-left" id="distance">Distance: 0 km</div>
+    <div class="corner-text bottom-right" id="time">Time: 00:00:00</div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.0/socket.io.min.js"></script>
+    
+    <!-- <script>
+    // const socket = io.connect("http://127.0.0.1:4002");
+    // // alert("?");
+    // // 当接收到新数据时，更新界面
+    // socket.on("update_data", function (data) {
+    //     document.getElementById("speed").textContent = data.speed;
+    //     document.getElementById("heart_rate").textContent = data.heart_rate;
+    //     document.getElementById("distance").textContent = data.distance;
+    //     document.getElementById("time").textContent = data.time;
+    // });
+    </script> -->
+</body>
+</html>
