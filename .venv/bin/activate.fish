@@ -33,7 +33,7 @@ end
 # Unset irrelevant variables.
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV /Users/a1234/vscode/code/python/test/.venv
+set -gx VIRTUAL_ENV /Users/a1234/vscode/code/python/OBS_overlay/.venv
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/"bin $PATH

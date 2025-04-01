@@ -66,5 +66,11 @@ def handle_connect():
 def index():
     return render_template('overlay.html')
 
+
+@app.route('/test')
+def test_page():
+    return render_template('test.html')
+
+
 if __name__ == '__main__':
     socketio.run(app, debug=True,port=4002)

@@ -1,4 +1,4 @@
-#!/Users/a1234/vscode/code/python/test/.venv/bin/python
+#!/Users/a1234/vscode/code/python/OBS_overlay/.venv/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys

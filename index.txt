@@ -1,0 +1,4 @@
+参考
+https://www.naivemap.com/mapbox-gl-js-cookbook/advance/track.html
+
+https://juejin.cn/post/7156844630133178405
