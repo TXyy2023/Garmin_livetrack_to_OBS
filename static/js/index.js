@@ -7,6 +7,11 @@ document.addEventListener("DOMContentLoaded", function () {
 		document.getElementById("speed").textContent = data.speed;
 		document.getElementById("heart_rate").textContent = data.heart_rate;
 		document.getElementById("distance").textContent = data.distance;
-		document.getElementById("time").textContent = data.time;
+		document.getElementById("During_time").textContent = data.During_time;
+		document.getElementById("true_time").textContent = data.true_time;
+		document.getElementById("position").textContent = data.lat + data.lon;
+		document.getElementById("activityType").textContent = data.activityType;
+		document.getElementById("pointStatus").textContent = data.pointStatus;
+		document.getElementById("cadence").textContent = data.cadence;
 	});
 });

@@ -1,0 +1,2814 @@
+{
+  "trackPoints": [
+    {
+      "dateTime": "2025-03-29T11:29:23.000Z",
+      "position": {
+        "lat": 40.2499238401651,
+        "lon": 116.141190771014
+      },
+      "altitude": 146.28,
+      "speed": 1.39,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [
+          "BEGIN"
+        ],
+        "pointStatus": "MOVING",
+        "distanceMeters": 10.4,
+        "heartRateBeatsPerMin": 110,
+        "speedMetersPerSec": 1.39,
+        "cadenceCyclesPerMin": 55,
+        "durationSecs": 31,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 10.4,
+        "totalDurationSecs": 31,
+        "elevation": "146.28"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:29:33.000Z",
+      "position": {
+        "lat": 40.2499732095748,
+        "lon": 116.14099547267
+      },
+      "altitude": 147.74,
+      "speed": 1.4,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 27.65,
+        "heartRateBeatsPerMin": 111,
+        "speedMetersPerSec": 1.4,
+        "cadenceCyclesPerMin": 55,
+        "durationSecs": 41,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 27.65,
+        "totalDurationSecs": 41,
+        "elevation": "147.74"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:29:43.000Z",
+      "position": {
+        "lat": 40.2499025501311,
+        "lon": 116.140918945894
+      },
+      "altitude": 148.56,
+      "speed": 1.31,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 38.97,
+        "heartRateBeatsPerMin": 110,
+        "speedMetersPerSec": 1.31,
+        "cadenceCyclesPerMin": 57,
+        "durationSecs": 51,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 38.97,
+        "totalDurationSecs": 51,
+        "elevation": "148.56"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:29:53.000Z",
+      "position": {
+        "lat": 40.2498116064817,
+        "lon": 116.140972506255
+      },
+      "altitude": 149.1,
+      "speed": 1.24,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 49.3,
+        "heartRateBeatsPerMin": 111,
+        "speedMetersPerSec": 1.24,
+        "cadenceCyclesPerMin": 56,
+        "durationSecs": 61,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 49.3,
+        "totalDurationSecs": 61,
+        "elevation": "149.1"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:30:03.000Z",
+      "position": {
+        "lat": 40.2497210819274,
+        "lon": 116.141052218154
+      },
+      "altitude": 149.69,
+      "speed": 1.19,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 61.31,
+        "heartRateBeatsPerMin": 110,
+        "speedMetersPerSec": 1.19,
+        "cadenceCyclesPerMin": 56,
+        "durationSecs": 71,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 61.31,
+        "totalDurationSecs": 71,
+        "elevation": "149.69"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:30:13.000Z",
+      "position": {
+        "lat": 40.2496325690299,
+        "lon": 116.141123045236
+      },
+      "altitude": 149.82,
+      "speed": 1.22,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 72.85,
+        "heartRateBeatsPerMin": 108,
+        "speedMetersPerSec": 1.22,
+        "cadenceCyclesPerMin": 53,
+        "durationSecs": 81,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 72.85,
+        "totalDurationSecs": 81,
+        "elevation": "149.82"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:30:23.000Z",
+      "position": {
+        "lat": 40.2495171502233,
+        "lon": 116.141163446009
+      },
+      "altitude": 149.24,
+      "speed": 1.32,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 85.99,
+        "heartRateBeatsPerMin": 109,
+        "speedMetersPerSec": 1.32,
+        "cadenceCyclesPerMin": 56,
+        "durationSecs": 91,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 85.99,
+        "totalDurationSecs": 91,
+        "elevation": "149.24"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:30:33.000Z",
+      "position": {
+        "lat": 40.2494029887021,
+        "lon": 116.141214994714
+      },
+      "altitude": 149.43,
+      "speed": 1.31,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 99.39,
+        "heartRateBeatsPerMin": 111,
+        "speedMetersPerSec": 1.31,
+        "cadenceCyclesPerMin": 56,
+        "durationSecs": 101,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 99.39,
+        "totalDurationSecs": 101,
+        "elevation": "149.43"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:30:43.000Z",
+      "position": {
+        "lat": 40.2492832951248,
+        "lon": 116.141178617254
+      },
+      "altitude": 149.66,
+      "speed": 1.32,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 114.36,
+        "heartRateBeatsPerMin": 110,
+        "speedMetersPerSec": 1.32,
+        "cadenceCyclesPerMin": 57,
+        "durationSecs": 111,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 114.36,
+        "totalDurationSecs": 111,
+        "elevation": "149.66"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:30:53.000Z",
+      "position": {
+        "lat": 40.249246833846,
+        "lon": 116.140992790461
+      },
+      "altitude": 149.9,
+      "speed": 1.35,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 130.83,
+        "heartRateBeatsPerMin": 107,
+        "speedMetersPerSec": 1.35,
+        "cadenceCyclesPerMin": 53,
+        "durationSecs": 121,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 130.83,
+        "totalDurationSecs": 121,
+        "elevation": "149.9"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:31:04.000Z",
+      "position": {
+        "lat": 40.2492402121425,
+        "lon": 116.140775447711
+      },
+      "altitude": 150.23,
+      "speed": 1.64,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 147.57,
+        "heartRateBeatsPerMin": 106,
+        "speedMetersPerSec": 1.64,
+        "cadenceCyclesPerMin": 57,
+        "durationSecs": 131,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 147.57,
+        "totalDurationSecs": 131,
+        "elevation": "150.23"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:31:14.000Z",
+      "position": {
+        "lat": 40.2492454089224,
+        "lon": 116.140630776063
+      },
+      "altitude": 150.41,
+      "speed": 1.61,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 160.68,
+        "heartRateBeatsPerMin": 112,
+        "speedMetersPerSec": 1.61,
+        "cadenceCyclesPerMin": 57,
+        "durationSecs": 141,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 160.68,
+        "totalDurationSecs": 141,
+        "elevation": "150.41"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:31:24.000Z",
+      "position": {
+        "lat": 40.249246917665,
+        "lon": 116.140482164919
+      },
+      "altitude": 150.63,
+      "speed": 1.42,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 173.65,
+        "heartRateBeatsPerMin": 114,
+        "speedMetersPerSec": 1.42,
+        "cadenceCyclesPerMin": 55,
+        "durationSecs": 151,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 173.65,
+        "totalDurationSecs": 151,
+        "elevation": "150.63"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:31:34.000Z",
+      "position": {
+        "lat": 40.2491972129792,
+        "lon": 116.140429778025
+      },
+      "altitude": 150.59,
+      "speed": 1.29,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 182.88,
+        "heartRateBeatsPerMin": 114,
+        "speedMetersPerSec": 1.29,
+        "cadenceCyclesPerMin": 58,
+        "durationSecs": 161,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 182.88,
+        "totalDurationSecs": 161,
+        "elevation": "150.59"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:31:44.000Z",
+      "position": {
+        "lat": 40.2491414733231,
+        "lon": 116.140443608165
+      },
+      "altitude": 148.78,
+      "speed": 0.91,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 189.64,
+        "heartRateBeatsPerMin": 114,
+        "speedMetersPerSec": 0.91,
+        "cadenceCyclesPerMin": 59,
+        "durationSecs": 171,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 189.64,
+        "totalDurationSecs": 171,
+        "elevation": "148.78"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:31:54.000Z",
+      "position": {
+        "lat": 40.2490626834333,
+        "lon": 116.140506640077
+      },
+      "altitude": 147.08,
+      "speed": 1.08,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 199.85,
+        "heartRateBeatsPerMin": 112,
+        "speedMetersPerSec": 1.08,
+        "cadenceCyclesPerMin": 61,
+        "durationSecs": 181,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 199.85,
+        "totalDurationSecs": 181,
+        "elevation": "147.08"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:32:04.000Z",
+      "position": {
+        "lat": 40.2489393856376,
+        "lon": 116.14050546661
+      },
+      "altitude": 147.11,
+      "speed": 1.21,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 214.5,
+        "heartRateBeatsPerMin": 107,
+        "speedMetersPerSec": 1.21,
+        "cadenceCyclesPerMin": 53,
+        "durationSecs": 191,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 214.5,
+        "totalDurationSecs": 191,
+        "elevation": "147.11"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:32:14.000Z",
+      "position": {
+        "lat": 40.2488966379315,
+        "lon": 116.14043279551
+      },
+      "altitude": 145.69,
+      "speed": 1.15,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 222.57,
+        "heartRateBeatsPerMin": 103,
+        "speedMetersPerSec": 1.15,
+        "cadenceCyclesPerMin": 64,
+        "durationSecs": 201,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 222.57,
+        "totalDurationSecs": 201,
+        "elevation": "145.69"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:32:24.000Z",
+      "position": {
+        "lat": 40.2489081211388,
+        "lon": 116.140317292884
+      },
+      "altitude": 143.63,
+      "speed": 1.05,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 232.35,
+        "heartRateBeatsPerMin": 106,
+        "speedMetersPerSec": 1.05,
+        "cadenceCyclesPerMin": 62,
+        "durationSecs": 211,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 232.35,
+        "totalDurationSecs": 211,
+        "elevation": "143.63"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:32:34.000Z",
+      "position": {
+        "lat": 40.2489959634841,
+        "lon": 116.140176309273
+      },
+      "altitude": 144.05,
+      "speed": 1.15,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 247.9,
+        "heartRateBeatsPerMin": 106,
+        "speedMetersPerSec": 1.15,
+        "cadenceCyclesPerMin": 55,
+        "durationSecs": 221,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 247.9,
+        "totalDurationSecs": 221,
+        "elevation": "144.05"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:32:44.000Z",
+      "position": {
+        "lat": 40.2490631025285,
+        "lon": 116.140046054497
+      },
+      "altitude": 144.38,
+      "speed": 1.28,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 261.41,
+        "heartRateBeatsPerMin": 102,
+        "speedMetersPerSec": 1.28,
+        "cadenceCyclesPerMin": 54,
+        "durationSecs": 231,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 261.41,
+        "totalDurationSecs": 231,
+        "elevation": "144.38"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:32:53.000Z",
+      "position": {
+        "lat": 40.2491046767682,
+        "lon": 116.139915212989
+      },
+      "altitude": 144.71,
+      "speed": 1.32,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 273.68,
+        "heartRateBeatsPerMin": 103,
+        "speedMetersPerSec": 1.32,
+        "cadenceCyclesPerMin": 55,
+        "durationSecs": 241,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 273.68,
+        "totalDurationSecs": 241,
+        "elevation": "144.71"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:33:04.000Z",
+      "position": {
+        "lat": 40.2491060178727,
+        "lon": 116.139768529683
+      },
+      "altitude": 145.03,
+      "speed": 1.34,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 286.5,
+        "heartRateBeatsPerMin": 99,
+        "speedMetersPerSec": 1.34,
+        "cadenceCyclesPerMin": 55,
+        "durationSecs": 251,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 286.5,
+        "totalDurationSecs": 251,
+        "elevation": "145.03"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:33:14.000Z",
+      "position": {
+        "lat": 40.2490812074393,
+        "lon": 116.139638358727
+      },
+      "altitude": 145.33,
+      "speed": 1.32,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 297.87,
+        "heartRateBeatsPerMin": 102,
+        "speedMetersPerSec": 1.32,
+        "cadenceCyclesPerMin": 55,
+        "durationSecs": 261,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 297.87,
+        "totalDurationSecs": 261,
+        "elevation": "145.33"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:33:24.000Z",
+      "position": {
+        "lat": 40.2490340173245,
+        "lon": 116.139491926879
+      },
+      "altitude": 145.62,
+      "speed": 1.32,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 311.3,
+        "heartRateBeatsPerMin": 105,
+        "speedMetersPerSec": 1.32,
+        "cadenceCyclesPerMin": 56,
+        "durationSecs": 271,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 311.3,
+        "totalDurationSecs": 271,
+        "elevation": "145.62"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:33:34.000Z",
+      "position": {
+        "lat": 40.2489611785859,
+        "lon": 116.139405006543
+      },
+      "altitude": 145.86,
+      "speed": 1.31,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 322.68,
+        "heartRateBeatsPerMin": 105,
+        "speedMetersPerSec": 1.31,
+        "cadenceCyclesPerMin": 55,
+        "durationSecs": 281,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 322.68,
+        "totalDurationSecs": 281,
+        "elevation": "145.86"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:33:44.000Z",
+      "position": {
+        "lat": 40.2488555666059,
+        "lon": 116.139342645183
+      },
+      "altitude": 146.04,
+      "speed": 1.3,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 335.11,
+        "heartRateBeatsPerMin": 103,
+        "speedMetersPerSec": 1.3,
+        "cadenceCyclesPerMin": 56,
+        "durationSecs": 291,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 335.11,
+        "totalDurationSecs": 291,
+        "elevation": "146.04"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:33:54.000Z",
+      "position": {
+        "lat": 40.2487459313124,
+        "lon": 116.139302663505
+      },
+      "altitude": 146.26,
+      "speed": 1.28,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 348.02,
+        "heartRateBeatsPerMin": 102,
+        "speedMetersPerSec": 1.28,
+        "cadenceCyclesPerMin": 56,
+        "durationSecs": 301,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 348.02,
+        "totalDurationSecs": 301,
+        "elevation": "146.26"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:34:04.000Z",
+      "position": {
+        "lat": 40.248636463657,
+        "lon": 116.139288581908
+      },
+      "altitude": 146.42,
+      "speed": 1.28,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 359.84,
+        "heartRateBeatsPerMin": 104,
+        "speedMetersPerSec": 1.28,
+        "cadenceCyclesPerMin": 56,
+        "durationSecs": 311,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 359.84,
+        "totalDurationSecs": 311,
+        "elevation": "146.42"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:34:14.000Z",
+      "position": {
+        "lat": 40.2485262416303,
+        "lon": 116.139277601615
+      },
+      "altitude": 146.49,
+      "speed": 1.27,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 372.14,
+        "heartRateBeatsPerMin": 101,
+        "speedMetersPerSec": 1.27,
+        "cadenceCyclesPerMin": 53,
+        "durationSecs": 321,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 372.14,
+        "totalDurationSecs": 321,
+        "elevation": "146.49"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:34:24.000Z",
+      "position": {
+        "lat": 40.2484182827175,
+        "lon": 116.139287576079
+      },
+      "altitude": 146.77,
+      "speed": 1.22,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 384.21,
+        "heartRateBeatsPerMin": 103,
+        "speedMetersPerSec": 1.22,
+        "cadenceCyclesPerMin": 53,
+        "durationSecs": 331,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 384.21,
+        "totalDurationSecs": 331,
+        "elevation": "146.77"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:34:34.000Z",
+      "position": {
+        "lat": 40.2483145985752,
+        "lon": 116.139287659898
+      },
+      "altitude": 146.78,
+      "speed": 1.2,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 396.01,
+        "heartRateBeatsPerMin": 103,
+        "speedMetersPerSec": 1.2,
+        "cadenceCyclesPerMin": 55,
+        "durationSecs": 341,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 396.01,
+        "totalDurationSecs": 341,
+        "elevation": "146.78"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:34:44.000Z",
+      "position": {
+        "lat": 40.248210914433,
+        "lon": 116.139288246632
+      },
+      "altitude": 146.8,
+      "speed": 1.19,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 407.66,
+        "heartRateBeatsPerMin": 104,
+        "speedMetersPerSec": 1.19,
+        "cadenceCyclesPerMin": 53,
+        "durationSecs": 351,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 407.66,
+        "totalDurationSecs": 351,
+        "elevation": "146.8"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:34:54.000Z",
+      "position": {
+        "lat": 40.2481037098914,
+        "lon": 116.139290593565
+      },
+      "altitude": 146.82,
+      "speed": 1.18,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 419.35,
+        "heartRateBeatsPerMin": 103,
+        "speedMetersPerSec": 1.18,
+        "cadenceCyclesPerMin": 52,
+        "durationSecs": 361,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 419.35,
+        "totalDurationSecs": 361,
+        "elevation": "146.82"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:35:04.000Z",
+      "position": {
+        "lat": 40.2479931525886,
+        "lon": 116.13930400461
+      },
+      "altitude": 146.78,
+      "speed": 1.17,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 431.79,
+        "heartRateBeatsPerMin": 105,
+        "speedMetersPerSec": 1.17,
+        "cadenceCyclesPerMin": 53,
+        "durationSecs": 371,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 431.79,
+        "totalDurationSecs": 371,
+        "elevation": "146.78"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:35:14.000Z",
+      "position": {
+        "lat": 40.2478820085526,
+        "lon": 116.139305345714
+      },
+      "altitude": 146.77,
+      "speed": 1.18,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 444.31,
+        "heartRateBeatsPerMin": 109,
+        "speedMetersPerSec": 1.18,
+        "cadenceCyclesPerMin": 55,
+        "durationSecs": 381,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 444.31,
+        "totalDurationSecs": 381,
+        "elevation": "146.77"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:35:24.000Z",
+      "position": {
+        "lat": 40.2477744687349,
+        "lon": 116.139321606606
+      },
+      "altitude": 146.73,
+      "speed": 1.19,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 456.32,
+        "heartRateBeatsPerMin": 107,
+        "speedMetersPerSec": 1.19,
+        "cadenceCyclesPerMin": 55,
+        "durationSecs": 391,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 456.32,
+        "totalDurationSecs": 391,
+        "elevation": "146.73"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:35:34.000Z",
+      "position": {
+        "lat": 40.2476727962494,
+        "lon": 116.139382962137
+      },
+      "altitude": 146.73,
+      "speed": 1.19,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 468.54,
+        "heartRateBeatsPerMin": 104,
+        "speedMetersPerSec": 1.19,
+        "cadenceCyclesPerMin": 56,
+        "durationSecs": 401,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 468.54,
+        "totalDurationSecs": 401,
+        "elevation": "146.73"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:35:44.000Z",
+      "position": {
+        "lat": 40.2475839480758,
+        "lon": 116.139477593824
+      },
+      "altitude": 146.85,
+      "speed": 1.2,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 481.37,
+        "heartRateBeatsPerMin": 105,
+        "speedMetersPerSec": 1.2,
+        "cadenceCyclesPerMin": 57,
+        "durationSecs": 411,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 481.37,
+        "totalDurationSecs": 411,
+        "elevation": "146.85"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:35:54.000Z",
+      "position": {
+        "lat": 40.2475143782795,
+        "lon": 116.139595527202
+      },
+      "altitude": 145.78,
+      "speed": 1.21,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 494.24,
+        "heartRateBeatsPerMin": 108,
+        "speedMetersPerSec": 1.21,
+        "cadenceCyclesPerMin": 57,
+        "durationSecs": 421,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 494.24,
+        "totalDurationSecs": 421,
+        "elevation": "145.78"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:36:04.000Z",
+      "position": {
+        "lat": 40.2474776655436,
+        "lon": 116.139732152224
+      },
+      "altitude": 145.63,
+      "speed": 1.22,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 506.43,
+        "heartRateBeatsPerMin": 106,
+        "speedMetersPerSec": 1.22,
+        "cadenceCyclesPerMin": 57,
+        "durationSecs": 431,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 506.43,
+        "totalDurationSecs": 431,
+        "elevation": "145.63"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:36:14.000Z",
+      "position": {
+        "lat": 40.2474803477526,
+        "lon": 116.139872381464
+      },
+      "altitude": 145.41,
+      "speed": 1.23,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 518.8,
+        "heartRateBeatsPerMin": 105,
+        "speedMetersPerSec": 1.23,
+        "cadenceCyclesPerMin": 55,
+        "durationSecs": 441,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 518.8,
+        "totalDurationSecs": 441,
+        "elevation": "145.41"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:36:24.000Z",
+      "position": {
+        "lat": 40.2475248556584,
+        "lon": 116.140013448894
+      },
+      "altitude": 145.46,
+      "speed": 1.22,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 530.81,
+        "heartRateBeatsPerMin": 109,
+        "speedMetersPerSec": 1.22,
+        "cadenceCyclesPerMin": 55,
+        "durationSecs": 451,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 530.81,
+        "totalDurationSecs": 451,
+        "elevation": "145.46"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:36:33.000Z",
+      "position": {
+        "lat": 40.2475957665592,
+        "lon": 116.14013498649
+      },
+      "altitude": 145.36,
+      "speed": 1.22,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 544.22,
+        "heartRateBeatsPerMin": 106,
+        "speedMetersPerSec": 1.22,
+        "cadenceCyclesPerMin": 54,
+        "durationSecs": 461,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 544.22,
+        "totalDurationSecs": 461,
+        "elevation": "145.36"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:36:44.000Z",
+      "position": {
+        "lat": 40.2476575411856,
+        "lon": 116.140226600692
+      },
+      "altitude": 145.47,
+      "speed": 1.21,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 555.21,
+        "heartRateBeatsPerMin": 108,
+        "speedMetersPerSec": 1.21,
+        "cadenceCyclesPerMin": 54,
+        "durationSecs": 471,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 555.21,
+        "totalDurationSecs": 471,
+        "elevation": "145.47"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:36:54.000Z",
+      "position": {
+        "lat": 40.2477587107569,
+        "lon": 116.140314526856
+      },
+      "altitude": 145.55,
+      "speed": 1.2,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 568.09,
+        "heartRateBeatsPerMin": 112,
+        "speedMetersPerSec": 1.2,
+        "cadenceCyclesPerMin": 55,
+        "durationSecs": 481,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 568.09,
+        "totalDurationSecs": 481,
+        "elevation": "145.55"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:37:04.000Z",
+      "position": {
+        "lat": 40.2478569466621,
+        "lon": 116.140343863517
+      },
+      "altitude": 145.69,
+      "speed": 1.21,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 579.75,
+        "heartRateBeatsPerMin": 112,
+        "speedMetersPerSec": 1.21,
+        "cadenceCyclesPerMin": 55,
+        "durationSecs": 491,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 579.75,
+        "totalDurationSecs": 491,
+        "elevation": "145.69"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:37:14.000Z",
+      "position": {
+        "lat": 40.2479675039649,
+        "lon": 116.140344366431
+      },
+      "altitude": 145.76,
+      "speed": 1.2,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 591.78,
+        "heartRateBeatsPerMin": 110,
+        "speedMetersPerSec": 1.2,
+        "cadenceCyclesPerMin": 55,
+        "durationSecs": 501,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 591.78,
+        "totalDurationSecs": 501,
+        "elevation": "145.76"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:37:24.000Z",
+      "position": {
+        "lat": 40.2480771392584,
+        "lon": 116.140335230157
+      },
+      "altitude": 145.75,
+      "speed": 1.21,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 604.34,
+        "heartRateBeatsPerMin": 111,
+        "speedMetersPerSec": 1.21,
+        "cadenceCyclesPerMin": 56,
+        "durationSecs": 511,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 604.34,
+        "totalDurationSecs": 511,
+        "elevation": "145.75"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:37:34.000Z",
+      "position": {
+        "lat": 40.2481895405799,
+        "lon": 116.140346629545
+      },
+      "altitude": 145.81,
+      "speed": 1.21,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 616.27,
+        "heartRateBeatsPerMin": 111,
+        "speedMetersPerSec": 1.21,
+        "cadenceCyclesPerMin": 56,
+        "durationSecs": 521,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 616.27,
+        "totalDurationSecs": 521,
+        "elevation": "145.81"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:37:44.000Z",
+      "position": {
+        "lat": 40.2483133412898,
+        "lon": 116.140342438594
+      },
+      "altitude": 146.02,
+      "speed": 1.22,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 630.4,
+        "heartRateBeatsPerMin": 109,
+        "speedMetersPerSec": 1.22,
+        "cadenceCyclesPerMin": 55,
+        "durationSecs": 531,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 630.4,
+        "totalDurationSecs": 531,
+        "elevation": "146.02"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:37:54.000Z",
+      "position": {
+        "lat": 40.2484183665365,
+        "lon": 116.140339002013
+      },
+      "altitude": 146.06,
+      "speed": 1.22,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 641.9,
+        "heartRateBeatsPerMin": 109,
+        "speedMetersPerSec": 1.22,
+        "cadenceCyclesPerMin": 52,
+        "durationSecs": 541,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 641.9,
+        "totalDurationSecs": 541,
+        "elevation": "146.06"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:38:04.000Z",
+      "position": {
+        "lat": 40.2485218830407,
+        "lon": 116.140345539898
+      },
+      "altitude": 146.18,
+      "speed": 1.21,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 653.63,
+        "heartRateBeatsPerMin": 107,
+        "speedMetersPerSec": 1.21,
+        "cadenceCyclesPerMin": 53,
+        "durationSecs": 551,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 653.63,
+        "totalDurationSecs": 551,
+        "elevation": "146.18"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:38:14.000Z",
+      "position": {
+        "lat": 40.2486269082874,
+        "lon": 116.140347635373
+      },
+      "altitude": 145.76,
+      "speed": 1.21,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 665.87,
+        "heartRateBeatsPerMin": 104,
+        "speedMetersPerSec": 1.21,
+        "cadenceCyclesPerMin": 52,
+        "durationSecs": 561,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 665.87,
+        "totalDurationSecs": 561,
+        "elevation": "145.76"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:38:24.000Z",
+      "position": {
+        "lat": 40.2487297542393,
+        "lon": 116.140345036983
+      },
+      "altitude": 146.05,
+      "speed": 1.18,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 676.66,
+        "heartRateBeatsPerMin": 110,
+        "speedMetersPerSec": 1.18,
+        "cadenceCyclesPerMin": 53,
+        "durationSecs": 571,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 676.66,
+        "totalDurationSecs": 571,
+        "elevation": "146.05"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:38:34.000Z",
+      "position": {
+        "lat": 40.2488448377699,
+        "lon": 116.140330703929
+      },
+      "altitude": 146.05,
+      "speed": 1.19,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 689.77,
+        "heartRateBeatsPerMin": 110,
+        "speedMetersPerSec": 1.19,
+        "cadenceCyclesPerMin": 54,
+        "durationSecs": 581,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 689.77,
+        "totalDurationSecs": 581,
+        "elevation": "146.05"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:38:44.000Z",
+      "position": {
+        "lat": 40.2488724980503,
+        "lon": 116.1403851863
+      },
+      "altitude": 147.48,
+      "speed": 1.03,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 696.51,
+        "heartRateBeatsPerMin": 110,
+        "speedMetersPerSec": 1.03,
+        "cadenceCyclesPerMin": 55,
+        "durationSecs": 591,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 696.51,
+        "totalDurationSecs": 591,
+        "elevation": "147.48"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:38:54.000Z",
+      "position": {
+        "lat": 40.2489023376256,
+        "lon": 116.140426257625
+      },
+      "altitude": 149.69,
+      "speed": 0,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "STATIONARY",
+        "distanceMeters": 701.27,
+        "heartRateBeatsPerMin": 115,
+        "speedMetersPerSec": 0,
+        "cadenceCyclesPerMin": 0,
+        "durationSecs": 601,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 701.27,
+        "totalDurationSecs": 601,
+        "elevation": "149.69"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:39:04.000Z",
+      "position": {
+        "lat": 40.2489919401705,
+        "lon": 116.140445033088
+      },
+      "altitude": 149.67,
+      "speed": 0,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "STATIONARY",
+        "distanceMeters": 711.55,
+        "heartRateBeatsPerMin": 112,
+        "speedMetersPerSec": 0,
+        "cadenceCyclesPerMin": 56,
+        "durationSecs": 611,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 711.55,
+        "totalDurationSecs": 611,
+        "elevation": "149.67"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:39:14.000Z",
+      "position": {
+        "lat": 40.2490727417171,
+        "lon": 116.140433717519
+      },
+      "altitude": 150.23,
+      "speed": 0.85,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 720.9,
+        "heartRateBeatsPerMin": 121,
+        "speedMetersPerSec": 0.85,
+        "cadenceCyclesPerMin": 55,
+        "durationSecs": 621,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 720.9,
+        "totalDurationSecs": 621,
+        "elevation": "150.23"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:39:24.000Z",
+      "position": {
+        "lat": 40.2491589076817,
+        "lon": 116.140448302031
+      },
+      "altitude": 152.62,
+      "speed": 0.77,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 729.47,
+        "heartRateBeatsPerMin": 129,
+        "speedMetersPerSec": 0.77,
+        "cadenceCyclesPerMin": 55,
+        "durationSecs": 631,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 729.47,
+        "totalDurationSecs": 631,
+        "elevation": "152.62"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:39:34.000Z",
+      "position": {
+        "lat": 40.2492304053158,
+        "lon": 116.140548298135
+      },
+      "altitude": 152.67,
+      "speed": 0.89,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 742.01,
+        "heartRateBeatsPerMin": 134,
+        "speedMetersPerSec": 0.89,
+        "cadenceCyclesPerMin": 58,
+        "durationSecs": 641,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 742.01,
+        "totalDurationSecs": 641,
+        "elevation": "152.67"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:39:44.000Z",
+      "position": {
+        "lat": 40.2492327522486,
+        "lon": 116.140730185434
+      },
+      "altitude": 152.28,
+      "speed": 1.05,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 757.51,
+        "heartRateBeatsPerMin": 133,
+        "speedMetersPerSec": 1.05,
+        "cadenceCyclesPerMin": 57,
+        "durationSecs": 651,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 757.51,
+        "totalDurationSecs": 651,
+        "elevation": "152.28"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:39:54.000Z",
+      "position": {
+        "lat": 40.2492458280176,
+        "lon": 116.140884831548
+      },
+      "altitude": 152.02,
+      "speed": 1.31,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 770.94,
+        "heartRateBeatsPerMin": 132,
+        "speedMetersPerSec": 1.31,
+        "cadenceCyclesPerMin": 56,
+        "durationSecs": 661,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 770.94,
+        "totalDurationSecs": 661,
+        "elevation": "152.02"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:40:04.000Z",
+      "position": {
+        "lat": 40.249230992049,
+        "lon": 116.141048027202
+      },
+      "altitude": 151.77,
+      "speed": 1.37,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 785.16,
+        "heartRateBeatsPerMin": 129,
+        "speedMetersPerSec": 1.37,
+        "cadenceCyclesPerMin": 57,
+        "durationSecs": 671,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 785.16,
+        "totalDurationSecs": 671,
+        "elevation": "151.77"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:40:14.000Z",
+      "position": {
+        "lat": 40.2492251247168,
+        "lon": 116.141205355525
+      },
+      "altitude": 151.67,
+      "speed": 1.34,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 798.58,
+        "heartRateBeatsPerMin": 124,
+        "speedMetersPerSec": 1.34,
+        "cadenceCyclesPerMin": 57,
+        "durationSecs": 681,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 798.58,
+        "totalDurationSecs": 681,
+        "elevation": "151.67"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:40:24.000Z",
+      "position": {
+        "lat": 40.2491742465645,
+        "lon": 116.141364863142
+      },
+      "altitude": 151.41,
+      "speed": 1.39,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 813.43,
+        "heartRateBeatsPerMin": 122,
+        "speedMetersPerSec": 1.39,
+        "cadenceCyclesPerMin": 57,
+        "durationSecs": 691,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 813.43,
+        "totalDurationSecs": 691,
+        "elevation": "151.41"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:40:34.000Z",
+      "position": {
+        "lat": 40.2490905951709,
+        "lon": 116.141447508708
+      },
+      "altitude": 151.19,
+      "speed": 1.39,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 824.86,
+        "heartRateBeatsPerMin": 121,
+        "speedMetersPerSec": 1.39,
+        "cadenceCyclesPerMin": 56,
+        "durationSecs": 701,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 824.86,
+        "totalDurationSecs": 701,
+        "elevation": "151.19"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:40:44.000Z",
+      "position": {
+        "lat": 40.2489766012877,
+        "lon": 116.141557898372
+      },
+      "altitude": 150.68,
+      "speed": 1.43,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 840.73,
+        "heartRateBeatsPerMin": 121,
+        "speedMetersPerSec": 1.43,
+        "cadenceCyclesPerMin": 57,
+        "durationSecs": 711,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 840.73,
+        "totalDurationSecs": 711,
+        "elevation": "150.68"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:40:54.000Z",
+      "position": {
+        "lat": 40.2488934528083,
+        "lon": 116.141637610272
+      },
+      "altitude": 150.32,
+      "speed": 1.42,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 852.43,
+        "heartRateBeatsPerMin": 119,
+        "speedMetersPerSec": 1.42,
+        "cadenceCyclesPerMin": 56,
+        "durationSecs": 721,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 852.43,
+        "totalDurationSecs": 721,
+        "elevation": "150.32"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:41:04.000Z",
+      "position": {
+        "lat": 40.248787002638,
+        "lon": 116.141731319949
+      },
+      "altitude": 149.51,
+      "speed": 1.4,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 866.67,
+        "heartRateBeatsPerMin": 119,
+        "speedMetersPerSec": 1.4,
+        "cadenceCyclesPerMin": 58,
+        "durationSecs": 731,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 866.67,
+        "totalDurationSecs": 731,
+        "elevation": "149.51"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:41:14.000Z",
+      "position": {
+        "lat": 40.2486925385892,
+        "lon": 116.141832238063
+      },
+      "altitude": 149.17,
+      "speed": 1.4,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 880.4,
+        "heartRateBeatsPerMin": 114,
+        "speedMetersPerSec": 1.4,
+        "cadenceCyclesPerMin": 57,
+        "durationSecs": 741,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 880.4,
+        "totalDurationSecs": 741,
+        "elevation": "149.17"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:41:24.000Z",
+      "position": {
+        "lat": 40.2486005891115,
+        "lon": 116.14195545204
+      },
+      "altitude": 148.85,
+      "speed": 1.4,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 894.79,
+        "heartRateBeatsPerMin": 114,
+        "speedMetersPerSec": 1.4,
+        "cadenceCyclesPerMin": 57,
+        "durationSecs": 751,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 894.79,
+        "totalDurationSecs": 751,
+        "elevation": "148.85"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:41:34.000Z",
+      "position": {
+        "lat": 40.2485145069659,
+        "lon": 116.142075145617
+      },
+      "altitude": 148.69,
+      "speed": 1.43,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 909.16,
+        "heartRateBeatsPerMin": 115,
+        "speedMetersPerSec": 1.43,
+        "cadenceCyclesPerMin": 57,
+        "durationSecs": 761,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 909.16,
+        "totalDurationSecs": 761,
+        "elevation": "148.69"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:41:44.000Z",
+      "position": {
+        "lat": 40.2484388183802,
+        "lon": 116.142208334059
+      },
+      "altitude": 148.52,
+      "speed": 1.43,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 923.26,
+        "heartRateBeatsPerMin": 113,
+        "speedMetersPerSec": 1.43,
+        "cadenceCyclesPerMin": 57,
+        "durationSecs": 771,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 923.26,
+        "totalDurationSecs": 771,
+        "elevation": "148.52"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:41:54.000Z",
+      "position": {
+        "lat": 40.2483964897692,
+        "lon": 116.142364321277
+      },
+      "altitude": 148.32,
+      "speed": 1.44,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 937.45,
+        "heartRateBeatsPerMin": 111,
+        "speedMetersPerSec": 1.44,
+        "cadenceCyclesPerMin": 59,
+        "durationSecs": 781,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 937.45,
+        "totalDurationSecs": 781,
+        "elevation": "148.32"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:42:04.000Z",
+      "position": {
+        "lat": 40.2484267484397,
+        "lon": 116.142466748133
+      },
+      "altitude": 148.39,
+      "speed": 1.45,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 949.27,
+        "heartRateBeatsPerMin": 107,
+        "speedMetersPerSec": 1.45,
+        "cadenceCyclesPerMin": 58,
+        "durationSecs": 791,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 949.27,
+        "totalDurationSecs": 791,
+        "elevation": "148.39"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:42:14.000Z",
+      "position": {
+        "lat": 40.2485384792089,
+        "lon": 116.142527349293
+      },
+      "altitude": 148.72,
+      "speed": 1.4,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 962.34,
+        "heartRateBeatsPerMin": 106,
+        "speedMetersPerSec": 1.4,
+        "cadenceCyclesPerMin": 55,
+        "durationSecs": 801,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 962.34,
+        "totalDurationSecs": 801,
+        "elevation": "148.72"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:42:24.000Z",
+      "position": {
+        "lat": 40.2486464381218,
+        "lon": 116.142584010959
+      },
+      "altitude": 148.12,
+      "speed": 1.38,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 974.76,
+        "heartRateBeatsPerMin": 112,
+        "speedMetersPerSec": 1.38,
+        "cadenceCyclesPerMin": 55,
+        "durationSecs": 811,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 974.76,
+        "totalDurationSecs": 811,
+        "elevation": "148.12"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:42:34.000Z",
+      "position": {
+        "lat": 40.2486676443368,
+        "lon": 116.142705548555
+      },
+      "altitude": 148.7,
+      "speed": 1.39,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 989.95,
+        "heartRateBeatsPerMin": 109,
+        "speedMetersPerSec": 1.39,
+        "cadenceCyclesPerMin": 57,
+        "durationSecs": 821,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 989.95,
+        "totalDurationSecs": 821,
+        "elevation": "148.7"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:42:44.000Z",
+      "position": {
+        "lat": 40.2485653012991,
+        "lon": 116.1427933909
+      },
+      "altitude": 148.55,
+      "speed": 1.39,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 1003.6,
+        "heartRateBeatsPerMin": 109,
+        "speedMetersPerSec": 1.39,
+        "cadenceCyclesPerMin": 58,
+        "durationSecs": 831,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 1003.6,
+        "totalDurationSecs": 831,
+        "elevation": "148.55"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:42:54.000Z",
+      "position": {
+        "lat": 40.2484788000584,
+        "lon": 116.142898248509
+      },
+      "altitude": 147.86,
+      "speed": 1.37,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 1016.53,
+        "heartRateBeatsPerMin": 112,
+        "speedMetersPerSec": 1.37,
+        "cadenceCyclesPerMin": 58,
+        "durationSecs": 841,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 1016.53,
+        "totalDurationSecs": 841,
+        "elevation": "147.86"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:43:04.000Z",
+      "position": {
+        "lat": 40.2484047040343,
+        "lon": 116.14306261763
+      },
+      "altitude": 147.15,
+      "speed": 1.38,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 1032.75,
+        "heartRateBeatsPerMin": 114,
+        "speedMetersPerSec": 1.38,
+        "cadenceCyclesPerMin": 58,
+        "durationSecs": 851,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 1032.75,
+        "totalDurationSecs": 851,
+        "elevation": "147.15"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:43:14.000Z",
+      "position": {
+        "lat": 40.248342929408,
+        "lon": 116.143176192418
+      },
+      "altitude": 146.59,
+      "speed": 1.39,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 1045.43,
+        "heartRateBeatsPerMin": 112,
+        "speedMetersPerSec": 1.39,
+        "cadenceCyclesPerMin": 57,
+        "durationSecs": 861,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 1045.43,
+        "totalDurationSecs": 861,
+        "elevation": "146.59"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:43:34.000Z",
+      "position": {
+        "lat": 40.2483527362347,
+        "lon": 116.143205696717
+      },
+      "altitude": 145.36,
+      "speed": 1.48,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 1055.41,
+        "heartRateBeatsPerMin": 113,
+        "speedMetersPerSec": 1.48,
+        "cadenceCyclesPerMin": 60,
+        "durationSecs": 881,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 1055.41,
+        "totalDurationSecs": 881,
+        "elevation": "145.36"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:47:14.000Z",
+      "position": {
+        "lat": 40.2483841683716,
+        "lon": 116.143117435277
+      },
+      "altitude": 144.92,
+      "speed": 1.45,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 1123.53,
+        "heartRateBeatsPerMin": 106,
+        "speedMetersPerSec": 1.45,
+        "cadenceCyclesPerMin": 56,
+        "durationSecs": 1101,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 1123.53,
+        "totalDurationSecs": 1101,
+        "elevation": "144.92"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:47:24.000Z",
+      "position": {
+        "lat": 40.2484518941492,
+        "lon": 116.142979217693
+      },
+      "altitude": 145.33,
+      "speed": 1.53,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 1143.18,
+        "heartRateBeatsPerMin": 111,
+        "speedMetersPerSec": 1.53,
+        "cadenceCyclesPerMin": 55,
+        "durationSecs": 1111,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 1143.18,
+        "totalDurationSecs": 1111,
+        "elevation": "145.33"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:47:34.000Z",
+      "position": {
+        "lat": 40.2484834101051,
+        "lon": 116.142823817208
+      },
+      "altitude": 145.93,
+      "speed": 1.4,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 1154.12,
+        "heartRateBeatsPerMin": 116,
+        "speedMetersPerSec": 1.4,
+        "cadenceCyclesPerMin": 53,
+        "durationSecs": 1121,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 1154.12,
+        "totalDurationSecs": 1121,
+        "elevation": "145.93"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:47:44.000Z",
+      "position": {
+        "lat": 40.2485421672463,
+        "lon": 116.142707895488
+      },
+      "altitude": 146.64,
+      "speed": 1.35,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 1166.14,
+        "heartRateBeatsPerMin": 117,
+        "speedMetersPerSec": 1.35,
+        "cadenceCyclesPerMin": 55,
+        "durationSecs": 1131,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 1166.14,
+        "totalDurationSecs": 1131,
+        "elevation": "146.64"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:47:54.000Z",
+      "position": {
+        "lat": 40.2486309316009,
+        "lon": 116.142612341791
+      },
+      "altitude": 147.25,
+      "speed": 1.3,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 1178.09,
+        "heartRateBeatsPerMin": 119,
+        "speedMetersPerSec": 1.3,
+        "cadenceCyclesPerMin": 55,
+        "durationSecs": 1141,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 1178.09,
+        "totalDurationSecs": 1141,
+        "elevation": "147.25"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:48:04.000Z",
+      "position": {
+        "lat": 40.2486516349018,
+        "lon": 116.142504634336
+      },
+      "altitude": 147.42,
+      "speed": 1.27,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 1189.51,
+        "heartRateBeatsPerMin": 121,
+        "speedMetersPerSec": 1.27,
+        "cadenceCyclesPerMin": 59,
+        "durationSecs": 1151,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 1189.51,
+        "totalDurationSecs": 1151,
+        "elevation": "147.42"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:48:14.000Z",
+      "position": {
+        "lat": 40.2485609427094,
+        "lon": 116.14242634736
+      },
+      "altitude": 146.87,
+      "speed": 1.29,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 1201.43,
+        "heartRateBeatsPerMin": 121,
+        "speedMetersPerSec": 1.29,
+        "cadenceCyclesPerMin": 0,
+        "durationSecs": 1161,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 1201.43,
+        "totalDurationSecs": 1161,
+        "elevation": "146.87"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:48:24.000Z",
+      "position": {
+        "lat": 40.248472429812,
+        "lon": 116.142378486693
+      },
+      "altitude": 147.09,
+      "speed": 1.27,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 1212.5,
+        "heartRateBeatsPerMin": 120,
+        "speedMetersPerSec": 1.27,
+        "cadenceCyclesPerMin": 53,
+        "durationSecs": 1171,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 1212.5,
+        "totalDurationSecs": 1171,
+        "elevation": "147.09"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:48:34.000Z",
+      "position": {
+        "lat": 40.248419707641,
+        "lon": 116.142306821421
+      },
+      "altitude": 147.28,
+      "speed": 1.22,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 1222.87,
+        "heartRateBeatsPerMin": 115,
+        "speedMetersPerSec": 1.22,
+        "cadenceCyclesPerMin": 57,
+        "durationSecs": 1181,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 1222.87,
+        "totalDurationSecs": 1181,
+        "elevation": "147.28"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:48:44.000Z",
+      "position": {
+        "lat": 40.2485158480704,
+        "lon": 116.142159048468
+      },
+      "altitude": 147.47,
+      "speed": 1.24,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 1239.7,
+        "heartRateBeatsPerMin": 109,
+        "speedMetersPerSec": 1.24,
+        "cadenceCyclesPerMin": 56,
+        "durationSecs": 1191,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 1239.7,
+        "totalDurationSecs": 1191,
+        "elevation": "147.47"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:48:54.000Z",
+      "position": {
+        "lat": 40.2486026845872,
+        "lon": 116.142053185031
+      },
+      "altitude": 147.62,
+      "speed": 1.27,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 1252.98,
+        "heartRateBeatsPerMin": 112,
+        "speedMetersPerSec": 1.27,
+        "cadenceCyclesPerMin": 55,
+        "durationSecs": 1201,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 1252.98,
+        "totalDurationSecs": 1201,
+        "elevation": "147.62"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:49:04.000Z",
+      "position": {
+        "lat": 40.2486929576844,
+        "lon": 116.14194069989
+      },
+      "altitude": 147.41,
+      "speed": 1.29,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 1266.93,
+        "heartRateBeatsPerMin": 113,
+        "speedMetersPerSec": 1.29,
+        "cadenceCyclesPerMin": 57,
+        "durationSecs": 1211,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 1266.93,
+        "totalDurationSecs": 1211,
+        "elevation": "147.41"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:49:14.000Z",
+      "position": {
+        "lat": 40.2487830631435,
+        "lon": 116.141842547804
+      },
+      "altitude": 147.35,
+      "speed": 1.26,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 1279.32,
+        "heartRateBeatsPerMin": 113,
+        "speedMetersPerSec": 1.26,
+        "cadenceCyclesPerMin": 59,
+        "durationSecs": 1221,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 1279.32,
+        "totalDurationSecs": 1221,
+        "elevation": "147.35"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:49:24.000Z",
+      "position": {
+        "lat": 40.2488828916103,
+        "lon": 116.141745233908
+      },
+      "altitude": 147.87,
+      "speed": 1.25,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 1292.97,
+        "heartRateBeatsPerMin": 116,
+        "speedMetersPerSec": 1.25,
+        "cadenceCyclesPerMin": 56,
+        "durationSecs": 1231,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 1292.97,
+        "totalDurationSecs": 1231,
+        "elevation": "147.87"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:49:34.000Z",
+      "position": {
+        "lat": 40.2489740028977,
+        "lon": 116.141648255289
+      },
+      "altitude": 147.99,
+      "speed": 1.25,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 1305.81,
+        "heartRateBeatsPerMin": 119,
+        "speedMetersPerSec": 1.25,
+        "cadenceCyclesPerMin": 56,
+        "durationSecs": 1241,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 1305.81,
+        "totalDurationSecs": 1241,
+        "elevation": "147.99"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:49:44.000Z",
+      "position": {
+        "lat": 40.2490733284503,
+        "lon": 116.141552198678
+      },
+      "altitude": 148.3,
+      "speed": 1.26,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 1319.6,
+        "heartRateBeatsPerMin": 120,
+        "speedMetersPerSec": 1.26,
+        "cadenceCyclesPerMin": 57,
+        "durationSecs": 1251,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 1319.6,
+        "totalDurationSecs": 1251,
+        "elevation": "148.3"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:49:54.000Z",
+      "position": {
+        "lat": 40.2491757553071,
+        "lon": 116.141448263079
+      },
+      "altitude": 148.69,
+      "speed": 1.29,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 1333.72,
+        "heartRateBeatsPerMin": 120,
+        "speedMetersPerSec": 1.29,
+        "cadenceCyclesPerMin": 58,
+        "durationSecs": 1261,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 1333.72,
+        "totalDurationSecs": 1261,
+        "elevation": "148.69"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:50:04.000Z",
+      "position": {
+        "lat": 40.2492928504944,
+        "lon": 116.141359163448
+      },
+      "altitude": 149.13,
+      "speed": 1.32,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 1348.96,
+        "heartRateBeatsPerMin": 120,
+        "speedMetersPerSec": 1.32,
+        "cadenceCyclesPerMin": 58,
+        "durationSecs": 1271,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 1348.96,
+        "totalDurationSecs": 1271,
+        "elevation": "149.13"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:50:14.000Z",
+      "position": {
+        "lat": 40.2494236081839,
+        "lon": 116.14127241075
+      },
+      "altitude": 149.47,
+      "speed": 1.38,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 1365.06,
+        "heartRateBeatsPerMin": 122,
+        "speedMetersPerSec": 1.38,
+        "cadenceCyclesPerMin": 59,
+        "durationSecs": 1281,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 1365.06,
+        "totalDurationSecs": 1281,
+        "elevation": "149.47"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:50:24.000Z",
+      "position": {
+        "lat": 40.2495531924069,
+        "lon": 116.141196973622
+      },
+      "altitude": 149.89,
+      "speed": 1.43,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 1380.83,
+        "heartRateBeatsPerMin": 125,
+        "speedMetersPerSec": 1.43,
+        "cadenceCyclesPerMin": 59,
+        "durationSecs": 1291,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 1380.83,
+        "totalDurationSecs": 1291,
+        "elevation": "149.89"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:50:34.000Z",
+      "position": {
+        "lat": 40.2496549487114,
+        "lon": 116.141113825142
+      },
+      "altitude": 150.18,
+      "speed": 1.45,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 1394.52,
+        "heartRateBeatsPerMin": 119,
+        "speedMetersPerSec": 1.45,
+        "cadenceCyclesPerMin": 57,
+        "durationSecs": 1301,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 1394.52,
+        "totalDurationSecs": 1301,
+        "elevation": "150.18"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:50:44.000Z",
+      "position": {
+        "lat": 40.2497883886099,
+        "lon": 116.141034616157
+      },
+      "altitude": 150.76,
+      "speed": 1.44,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 1409.53,
+        "heartRateBeatsPerMin": 120,
+        "speedMetersPerSec": 1.44,
+        "cadenceCyclesPerMin": 58,
+        "durationSecs": 1311,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 1409.53,
+        "totalDurationSecs": 1311,
+        "elevation": "150.76"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:50:54.000Z",
+      "position": {
+        "lat": 40.2498937491328,
+        "lon": 116.14096689038
+      },
+      "altitude": 151.19,
+      "speed": 1.46,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 1422.96,
+        "heartRateBeatsPerMin": 118,
+        "speedMetersPerSec": 1.46,
+        "cadenceCyclesPerMin": 59,
+        "durationSecs": 1321,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 1422.96,
+        "totalDurationSecs": 1321,
+        "elevation": "151.19"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:51:04.000Z",
+      "position": {
+        "lat": 40.2499753888696,
+        "lon": 116.141072586179
+      },
+      "altitude": 151,
+      "speed": 1.45,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 1437.65,
+        "heartRateBeatsPerMin": 117,
+        "speedMetersPerSec": 1.45,
+        "cadenceCyclesPerMin": 57,
+        "durationSecs": 1331,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 1437.65,
+        "totalDurationSecs": 1331,
+        "elevation": "151"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:51:14.000Z",
+      "position": {
+        "lat": 40.2500171307474,
+        "lon": 116.141247181222
+      },
+      "altitude": 150.79,
+      "speed": 1.44,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 1453.14,
+        "heartRateBeatsPerMin": 120,
+        "speedMetersPerSec": 1.44,
+        "cadenceCyclesPerMin": 57,
+        "durationSecs": 1341,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 1453.14,
+        "totalDurationSecs": 1341,
+        "elevation": "150.79"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:51:24.000Z",
+      "position": {
+        "lat": 40.2500330563635,
+        "lon": 116.141374250874
+      },
+      "altitude": 150.71,
+      "speed": 1.39,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 1464.61,
+        "heartRateBeatsPerMin": 117,
+        "speedMetersPerSec": 1.39,
+        "cadenceCyclesPerMin": 55,
+        "durationSecs": 1351,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 1464.61,
+        "totalDurationSecs": 1351,
+        "elevation": "150.71"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:51:34.000Z",
+      "position": {
+        "lat": 40.2500327210873,
+        "lon": 116.141526717693
+      },
+      "altitude": 150.6,
+      "speed": 1.38,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 1477.97,
+        "heartRateBeatsPerMin": 118,
+        "speedMetersPerSec": 1.38,
+        "cadenceCyclesPerMin": 57,
+        "durationSecs": 1361,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 1477.97,
+        "totalDurationSecs": 1361,
+        "elevation": "150.6"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:51:44.000Z",
+      "position": {
+        "lat": 40.2500998601317,
+        "lon": 116.141694942489
+      },
+      "altitude": 150.23,
+      "speed": 1.35,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 1493.13,
+        "heartRateBeatsPerMin": 116,
+        "speedMetersPerSec": 1.35,
+        "cadenceCyclesPerMin": 57,
+        "durationSecs": 1371,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 1493.13,
+        "totalDurationSecs": 1371,
+        "elevation": "150.23"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:51:54.000Z",
+      "position": {
+        "lat": 40.2501128520817,
+        "lon": 116.141835423186
+      },
+      "altitude": 150,
+      "speed": 1.32,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 1505.52,
+        "heartRateBeatsPerMin": 114,
+        "speedMetersPerSec": 1.32,
+        "cadenceCyclesPerMin": 57,
+        "durationSecs": 1381,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 1505.52,
+        "totalDurationSecs": 1381,
+        "elevation": "150"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:52:04.000Z",
+      "position": {
+        "lat": 40.2501673344523,
+        "lon": 116.141878589988
+      },
+      "altitude": 150.09,
+      "speed": 1.3,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 1513.12,
+        "heartRateBeatsPerMin": 111,
+        "speedMetersPerSec": 1.3,
+        "cadenceCyclesPerMin": 55,
+        "durationSecs": 1391,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 1513.12,
+        "totalDurationSecs": 1391,
+        "elevation": "150.09"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:52:14.000Z",
+      "position": {
+        "lat": 40.2502550091594,
+        "lon": 116.141879176721
+      },
+      "altitude": 150.54,
+      "speed": 1.17,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 1522.76,
+        "heartRateBeatsPerMin": 106,
+        "speedMetersPerSec": 1.17,
+        "cadenceCyclesPerMin": 55,
+        "durationSecs": 1401,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 1522.76,
+        "totalDurationSecs": 1401,
+        "elevation": "150.54"
+      }
+    },
+    {
+      "dateTime": "2025-03-29T11:52:24.000Z",
+      "position": {
+        "lat": 40.2503108326346,
+        "lon": 116.141784461215
+      },
+      "altitude": 151.06,
+      "speed": 1.05,
+      "fitnessPointData": {
+        "deviceId": 3348416368,
+        "activityType": "WALKING",
+        "eventTypes": [],
+        "pointStatus": "MOVING",
+        "distanceMeters": 1532.42,
+        "heartRateBeatsPerMin": 114,
+        "speedMetersPerSec": 1.05,
+        "cadenceCyclesPerMin": 55,
+        "durationSecs": 1411,
+        "activityCreatedTime": "2025-03-29T11:28:53.000Z",
+        "totalDistanceMeters": 1532.42,
+        "totalDurationSecs": 1411,
+        "elevation": "151.06"
+      }
+    }
+  ]
+}
