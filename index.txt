@@ -1,6 +1,11 @@
 参考
 mapbox官方案例==>https://docs.mapbox.com/mapbox-gl-js/example/
 
+map数据参考https://labs.mapbox.com/location-helper/
+
+mapbox API文档==>https://docs.mapbox.com/mapbox-gl-js/api/map/#instance-members-sources
+
+
 
 
 https://www.naivemap.com/mapbox-gl-js-cookbook/advance/track.html

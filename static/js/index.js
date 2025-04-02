@@ -1,3 +1,54 @@
+var geo_in_data = {
+	type: "Feature",
+	properties: {},
+	geometry: {
+		type: "LineString",
+		coordinates: [
+			[-122.483696, 37.833818],
+			[-122.483482, 37.833174],
+			[-122.483396, 37.8327],
+			[-122.483568, 37.832056],
+			[-122.48404, 37.831141],
+			[-122.48404, 37.830497],
+			[-122.483482, 37.82992],
+			[-122.483568, 37.829548],
+			[-122.48507, 37.829446],
+			[-122.4861, 37.828802],
+			[-122.486958, 37.82931],
+			[-122.487001, 37.830802],
+			[-122.487516, 37.831683],
+			[-122.488031, 37.832158],
+			[-122.488889, 37.832971],
+			[-122.489876, 37.832632],
+			[-122.490434, 37.832937],
+			[-122.49125, 37.832429],
+			[-122.491636, 37.832564],
+			[-122.492237, 37.833378],
+			[-122.493782, 37.833683],
+		],
+	},
+};
+
+var geo_in_data_test = {
+	type: "Feature",
+	properties: {},
+	geometry: {
+		type: "LineString",
+		coordinates: [
+			[-122.483696, 37.833818],
+			[-122.483482, 37.833174],
+		],
+	},
+};
+
+function geo_add_data(lon, lat) {
+	// 将新的坐标添加到 geo_in_data.features[0].geometry.coordinates
+	geo_in_data_test.geometry.coordinates.push([lon, lat]);
+
+	console.log(geo_in_data_test.geometry.coordinates);
+	return geo_in_data_test; // 返回更新后的 geo_in_data
+}
+
 document.addEventListener("DOMContentLoaded", function () {
 	// 确保 DOM 加载完成后再执行代码
 	const socket = io.connect("http://127.0.0.1:4002");
@@ -13,6 +64,8 @@ document.addEventListener("DOMContentLoaded", function () {
 		document.getElementById("activityType").textContent = data.activityType;
 		document.getElementById("pointStatus").textContent = data.pointStatus;
 		document.getElementById("cadence").textContent = data.cadence;
+		// console.log(data);
+		geo_add_data(data.lon, data.lat);
 	});
 
 	mapboxgl.accessToken =
@@ -21,69 +74,33 @@ document.addEventListener("DOMContentLoaded", function () {
 		container: "map",
 		// Choose from Mapbox's core styles, or make your own style with Mapbox Studio
 		style: "mapbox://styles/mapbox/streets-v12",
-		zoom: 1.5,
+		center: [-122.486052, 37.830348],
+		zoom: 14,
 	});
 
-	map.on("load", async () => {
-		// Get the initial location of the International Space Station (ISS).
-		const geojson = await getLocation();
-		// Add the ISS location as a source.
-		map.addSource("iss", {
+	map.on("load", () => {
+		map.addSource("route", {
 			type: "geojson",
-			data: geojson,
+			data: geo_in_data,
 		});
-		// Add the rocket symbol layer to the map.
 		map.addLayer({
-			id: "iss",
-			type: "symbol",
-			source: "iss",
+			id: "route",
+			type: "line",
+			source: "route",
 			layout: {
-				// This icon is a part of the Mapbox Streets style.
-				// To view all images available in a Mapbox style, open
-				// the style in Mapbox Studio and click the "Images" tab.
-				// To add a new image to the style at runtime see
-				// https://docs.mapbox.com/mapbox-gl-js/example/add-image/
-				"icon-image": "rocket",
+				"line-join": "round",
+				"line-cap": "round",
+			},
+			paint: {
+				"line-color": "#888",
+				"line-width": 8,
 			},
 		});
 
-		// Update the source from the API every 2 seconds.
-		const updateSource = setInterval(async () => {
-			const geojson = await getLocation(updateSource);
-			map.getSource("iss").setData(geojson);
-		}, 2000);
-
-		async function getLocation(updateSource) {
-			// Make a GET request to the API and return the location of the ISS.
-			try {
-				const response = await fetch("https://api.wheretheiss.at/v1/satellites/25544", {
-					method: "GET",
-				});
-				const { latitude, longitude } = await response.json();
-				console.log(latitude, longitude);
-				// Fly the map to the location.
-				map.flyTo({
-					center: [longitude, latitude],
-					speed: 0.5,
-				});
-				// Return the location of the ISS as GeoJSON.
-				return {
-					type: "FeatureCollection",
-					features: [
-						{
-							type: "Feature",
-							geometry: {
-								type: "Point",
-								coordinates: [longitude, latitude],
-							},
-						},
-					],
-				};
-			} catch (err) {
-				// If the updateSource interval is defined, clear the interval to stop updating the source.
-				if (updateSource) clearInterval(updateSource);
-				throw new Error(err);
-			}
-		}
+		setInterval(async () => {
+			map.getSource("route").setData(geo_in_data_test);
+			console.log("get in ");
+		}, 1000);
+		// map.getSource("route").setData(geo_in_data_test);
 	});
 });
