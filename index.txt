@@ -1,4 +1,17 @@
 参考
+mapbox官方案例==>https://docs.mapbox.com/mapbox-gl-js/example/
+
+
+
 https://www.naivemap.com/mapbox-gl-js-cookbook/advance/track.html
 
 https://juejin.cn/post/7156844630133178405
+
+
+https://docs.mapbox.com/mapbox-gl-js/example/animate-ant-path/
+
+
+
+
+
+

@@ -22,3 +22,19 @@
 "elevation": "151.06" ==>海拔
 }
 }
+
+{
+"type": "FeatureCollection",
+"features": [
+{
+"type": "Feature",
+"geometry": {
+"type": "Point",
+"coordinates": [
+148.73361389422,
+-51.071004949544
+]
+}
+}
+]
+}

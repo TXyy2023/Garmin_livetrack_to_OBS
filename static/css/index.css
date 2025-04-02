@@ -18,7 +18,18 @@ body {
     font-weight: bold;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
-
+#map {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: 400px; /* 调整大小 */
+    height: 400px; /* 调整大小 */
+    border: 2px solid #333;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    background: white;
+    overflow: hidden;
+}
 /* .top-left {
     top: 10px;
     left: 10px;
