@@ -40,20 +40,20 @@ def generate_random_data():
         cadence=data['fitnessPointData']['cadenceCyclesPerMin']
         # 将数据通过 WebSocket 推送到前端
         socketio.emit('update_data', {
-            'speed': f"Speed: {speed} km/h",
-            'heart_rate': f"Heart Rate: {heart_rate} bpm",
-            'distance': f"Distance: {distance} m",
-            'During_time': f"Time: {During_time}",
-            'lat': f"lat: {lat}",
-            'lon': f"lon: {lon}",
-            'true_time': f"true_time: {true_time}",
-            'activityType': f"activityType: {activityType}",
-            'pointStatus': f"pointStatus: {pointStatus}",
-            'cadence': f"cadence: {cadence}",            
+            'speed': str(speed),
+            'heart_rate': str(heart_rate),  
+            'distance': str(distance),
+            'During_time': str(During_time),
+            'lat': str(lat),
+            'lon': str(lon),
+            'true_time': str(true_time),
+            'activityType':str(activityType),
+            'pointStatus': str(pointStatus),
+            'cadence': str(cadence),            
         })
-        # 每3秒更新一次
+
         counter+=1
-        time.sleep(2)
+        time.sleep(0.5)
 
 # 在连接时启动后台线程
 @socketio.on('connect')

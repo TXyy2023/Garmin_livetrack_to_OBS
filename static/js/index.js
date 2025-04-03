@@ -34,10 +34,7 @@ var geo_in_data_test = {
 	properties: {},
 	geometry: {
 		type: "LineString",
-		coordinates: [
-			[-122.483696, 37.833818],
-			[-122.483482, 37.833174],
-		],
+		coordinates: [[116.141190771014, 40.2499238401651]],
 	},
 };
 
@@ -55,15 +52,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	// 当接收到新数据时，更新界面
 	socket.on("update_data", function (data) {
-		document.getElementById("speed").textContent = data.speed;
-		document.getElementById("heart_rate").textContent = data.heart_rate;
-		document.getElementById("distance").textContent = data.distance;
-		document.getElementById("During_time").textContent = data.During_time;
-		document.getElementById("true_time").textContent = data.true_time;
-		document.getElementById("position").textContent = data.lat + data.lon;
-		document.getElementById("activityType").textContent = data.activityType;
-		document.getElementById("pointStatus").textContent = data.pointStatus;
-		document.getElementById("cadence").textContent = data.cadence;
+		document.getElementById("speed").textContent = `Speed: ${data.speed} km/h`;
+		document.getElementById("heart_rate").textContent = `heart_rate: ${data.heart_rate} bpm`;
+		document.getElementById("distance").textContent = `distance: ${data.distance} km`;
+		document.getElementById("During_time").textContent = `During_time: ${data.During_time}`;
+		document.getElementById("true_time").textContent = `true_time: ${data.true_time}`;
+		document.getElementById("position").textContent = `position: ${data.lat + data.lon}`;
+		document.getElementById("activityType").textContent = `activityType: ${data.activityType}`;
+		document.getElementById("pointStatus").textContent = `pointStatus: ${data.pointStatus}`;
+		document.getElementById("cadence").textContent = `cadence: ${data.cadence}`;
 		// console.log(data);
 		geo_add_data(data.lon, data.lat);
 	});
@@ -73,8 +70,8 @@ document.addEventListener("DOMContentLoaded", function () {
 	const map = new mapboxgl.Map({
 		container: "map",
 		// Choose from Mapbox's core styles, or make your own style with Mapbox Studio
-		style: "mapbox://styles/mapbox/streets-v12",
-		center: [-122.486052, 37.830348],
+		style: "mapbox://styles/bbndskowe/cm8yph7y8004401qzchugbnly",
+		center: [116.141190771014, 40.2499238401651],
 		zoom: 14,
 	});
 
@@ -97,10 +94,22 @@ document.addEventListener("DOMContentLoaded", function () {
 			},
 		});
 
-		setInterval(async () => {
+		// setInterval(async () => {
+		// 	map.getSource("route").setData(geo_in_data_test);
+		// 	console.log("get in ");
+		// 	requestAnimationFrame(animate);
+		// }, 1000);
+		function animate() {
 			map.getSource("route").setData(geo_in_data_test);
-			console.log("get in ");
-		}, 1000);
+			// map.flyTo({
+			// 	center: geo_in_data_test.geometry.coordinates.at(-1),
+			// 	essential: true,
+			// });
+			map.panTo(geo_in_data_test.geometry.coordinates.at(-1));
+			// console.log("get in ");
+			requestAnimationFrame(animate);
+		}
+		animate();
 		// map.getSource("route").setData(geo_in_data_test);
 	});
 });

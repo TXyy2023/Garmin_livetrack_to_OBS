@@ -3,8 +3,7 @@ mapbox官方案例==>https://docs.mapbox.com/mapbox-gl-js/example/
 
 map数据参考https://labs.mapbox.com/location-helper/
 
-mapbox API文档==>https://docs.mapbox.com/mapbox-gl-js/api/map/#instance-members-sources
-
+mapbox API文档==>https://docs.mapbox.com/mapbox-gl-js/api
 
 
 
@@ -14,7 +13,7 @@ https://juejin.cn/post/7156844630133178405
 
 
 https://docs.mapbox.com/mapbox-gl-js/example/animate-ant-path/
-
+https://docs.mapbox.com/mapbox-gl-js/example/live-update-feature/
 
 
 
