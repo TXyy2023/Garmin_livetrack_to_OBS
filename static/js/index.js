@@ -29,20 +29,36 @@ var geo_in_data = {
 	},
 };
 
-var geo_in_data_test = {
+const geo_in_data_test = {
 	type: "Feature",
 	properties: {},
 	geometry: {
 		type: "LineString",
-		coordinates: [[116.141190771014, 40.2499238401651]],
+		coordinates: [
+			[116.141190771014, 40.2499238401651],
+			[116.14099547267, 40.2499238401651],
+		],
 	},
+};
+const point_pos = {
+	type: "FeatureCollection",
+	features: [
+		{
+			type: "Feature",
+			properties: {},
+			geometry: {
+				type: "Point",
+				coordinates: [116.141190771014, 40.2499238401651],
+			},
+		},
+	],
 };
 
 function geo_add_data(lon, lat) {
 	// 将新的坐标添加到 geo_in_data.features[0].geometry.coordinates
 	geo_in_data_test.geometry.coordinates.push([lon, lat]);
 
-	console.log(geo_in_data_test.geometry.coordinates);
+	// console.log(geo_in_data_test.geometry.coordinates);
 	return geo_in_data_test; // 返回更新后的 geo_in_data
 }
 
@@ -62,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		document.getElementById("pointStatus").textContent = `pointStatus: ${data.pointStatus}`;
 		document.getElementById("cadence").textContent = `cadence: ${data.cadence}`;
 		// console.log(data);
-		geo_add_data(data.lon, data.lat);
+		geo_add_data(parseFloat(data.lon), parseFloat(data.lat));
 	});
 
 	mapboxgl.accessToken =
@@ -70,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	const map = new mapboxgl.Map({
 		container: "map",
 		// Choose from Mapbox's core styles, or make your own style with Mapbox Studio
-		style: "mapbox://styles/bbndskowe/cm8yph7y8004401qzchugbnly",
+		style: "mapbox://styles/mapbox/dark-v11",
 		center: [116.141190771014, 40.2499238401651],
 		zoom: 14,
 	});
@@ -79,6 +95,28 @@ document.addEventListener("DOMContentLoaded", function () {
 		map.addSource("route", {
 			type: "geojson",
 			data: geo_in_data,
+		});
+		map.addSource("point", {
+			type: "geojson",
+			data: point_pos,
+		});
+		map.addLayer({
+			id: "point",
+			source: "point",
+			type: "symbol",
+			layout: {
+				// This icon is a part of the Mapbox Streets style.
+				// To view all images available in a Mapbox style, open
+				// the style in Mapbox Studio and click the "Images" tab.
+				// To add a new image to the style at runtime see
+				// https://docs.mapbox.com/mapbox-gl-js/example/add-image/
+				"icon-image": "airport",
+				"icon-size": 1.5,
+				"icon-rotate": ["get", "bearing"],
+				"icon-rotation-alignment": "map",
+				"icon-allow-overlap": true,
+				"icon-ignore-placement": true,
+			},
 		});
 		map.addLayer({
 			id: "route",
@@ -106,6 +144,15 @@ document.addEventListener("DOMContentLoaded", function () {
 			// 	essential: true,
 			// });
 			map.panTo(geo_in_data_test.geometry.coordinates.at(-1));
+			const last_point = geo_in_data_test.geometry.coordinates.at(-2);
+			const now_point = geo_in_data_test.geometry.coordinates.at(-1);
+
+			point_pos.features[0].geometry.coordinates = now_point;
+			point_pos.features[0].properties.bearing = turf.bearing(
+				turf.point(last_point),
+				turf.point(now_point)
+			);
+			map.getSource("point").setData(point_pos);
 			// console.log("get in ");
 			requestAnimationFrame(animate);
 		}
