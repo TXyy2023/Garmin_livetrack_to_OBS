@@ -70,7 +70,9 @@ document.addEventListener("DOMContentLoaded", function () {
 	socket.on("update_data", function (data) {
 		document.getElementById("speed").textContent = `Speed: ${data.speed} km/h`;
 		document.getElementById("heart_rate").textContent = `heart_rate: ${data.heart_rate} bpm`;
-		document.getElementById("distance").textContent = `distance: ${data.distance} km`;
+		document.getElementById("distance").textContent = `distance: ${(data.distance / 1000).toFixed(
+			2
+		)} km`;
 		document.getElementById("During_time").textContent = `During_time: ${data.During_time}`;
 		document.getElementById("true_time").textContent = `true_time: ${data.true_time}`;
 		document.getElementById("position").textContent = `position: ${data.lat + data.lon}`;
@@ -89,6 +91,14 @@ document.addEventListener("DOMContentLoaded", function () {
 		style: "mapbox://styles/mapbox/dark-v11",
 		center: [116.141190771014, 40.2499238401651],
 		zoom: 14,
+		attributionControl: false,
+
+		// 下面这些是交互设置（如果你要确保能缩放平移，可以这样写）
+		dragPan: true, // 允许拖动地图平移
+		scrollZoom: true, // 允许滚轮缩放
+		doubleClickZoom: true, // 双击缩放
+		touchZoomRotate: true, // 触摸屏缩放旋转
+		keyboard: true, // 键盘控制（上下左右、+-缩放）
 	});
 
 	map.on("load", () => {

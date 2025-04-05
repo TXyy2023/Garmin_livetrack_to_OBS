@@ -13,18 +13,30 @@
     <!-- <script src="https://unpkg.com/@turf/turf/turf.min.js"></script> -->
     <link href="{{ url_for('static', filename='css/index.css') }}" rel="stylesheet">
     <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.0/socket.io.min.js"></script>
+    
     <div class="corner-text top-left" id="speed">Speed: 0 km/h</div>
     <div class="corner-text top-right" id="heart_rate">Heart Rate: 0 bpm</div>
-    <div class="corner-text bottom-left" id="distance">Distance: 0 km</div>
-    <div class="corner-text bottom-right" id="During_time">Time: 00:00:00</div>
-    <div class="corner-text bottom-right" id="true_time">true_time: 00:00:00</div>
-    <div class="corner-text bottom-right" id="position">position</div>
+
+
+    <div id="total_data">
+        <div class="corner-text bottom-right" id="true_time">true_time: 00:00:00</div>
+        <div class="corner-text bottom-right" id="During_time">Time: 00:00:00</div>
+        <div class="corner-text bottom-left" id="distance">Distance: 0 km</div>
+    </div>
+
+
     <div class="corner-text bottom-right" id="activityType">activityType</div>
     <div class="corner-text bottom-right" id="pointStatus">pointStatus</div>
     <!-- 状态==>是否停止 -->
     <div class="corner-text bottom-right" id="cadence">cadenceCyclesPerMin</div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.0/socket.io.min.js"></script>
-    <div id="map"></div>
+
+
+
+    <div id="map_container">
+        <div id="map"></div>
+        <div id="position">position</div>
+    </div>
     <!-- <script>
     // const socket = io.connect("http://127.0.0.1:4002");
     // // alert("?");

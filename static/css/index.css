@@ -13,25 +13,49 @@ body {
 .corner-text {
     /* position: absolute; */
     color: white;
-    font-size: 4vw; /* 根据屏幕宽度调整字体大小 */
+    font-size: 3vw; /* 根据屏幕宽度调整字体大小 */
     font-family: Arial, sans-serif;
     font-weight: bold;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
+#total_data {
+    position: absolute;
+    top:2vw;
+    right:1.5vw
+}
+
+#map_container {
+    position: absolute;
+    bottom: 4vw;
+    right: 1.5vw;
+}
+
 #map {
     position: absolute;
-    bottom: 20px;
-    left: 20px;
-    width: 400px; 
-    height: 400px; 
-    border: 2px solid #333;
-    border-radius: 10px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    bottom: 0;
+    right: 0;
+    width: 20vw;
+    height: 20vw;
+    border: 0.2vw solid #333;
+    border-radius: 0.5vw;
+    box-shadow: 0.1vw 0.1vw 0.5vw rgba(0, 0, 0, 0.3);
     background: white;
     overflow: hidden;
 }
 
+#position {
+    position: absolute;
+    bottom: -3vw; /* 距离 map 底部一定距离，根据自己调整 */
+    right: -0.8vw;
+    padding: 0.5vw 1vw;
+    background: rgba(255, 255, 255, 0.8);
+    border: 0.1vw solid #333;
+    border-radius: 0.5vw;
+    font-size: 1vw;
+    box-shadow: 0.1vw 0.1vw 0.3vw rgba(0, 0, 0, 0.2);
+    white-space: nowrap; /* 保持一行显示，不换行 */
+}
 
  /* #map { 
     position: absolute;
