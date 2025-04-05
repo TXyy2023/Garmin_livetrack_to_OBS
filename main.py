@@ -37,7 +37,8 @@ def generate_random_data():
         true_time = dt_object + timedelta(hours=8)
         activityType=data['fitnessPointData']['activityType']
         pointStatus=data['fitnessPointData']['pointStatus']
-        cadence=data['fitnessPointData']['cadenceCyclesPerMin']
+        # cadence=data['fitnessPointData']['cadenceCyclesPerMin']
+        cadence=-1
         # 将数据通过 WebSocket 推送到前端
         socketio.emit('update_data', {
             'speed': str(speed),
