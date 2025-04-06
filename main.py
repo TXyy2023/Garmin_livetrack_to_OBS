@@ -35,6 +35,7 @@ def generate_random_data():
         true_time=data['dateTime']
         dt_object = datetime.strptime(true_time, "%Y-%m-%dT%H:%M:%S.%fZ")
         true_time = dt_object + timedelta(hours=8)
+        altitude=data["altitude"]
         activityType=data['fitnessPointData']['activityType']
         pointStatus=data['fitnessPointData']['pointStatus']
         # cadence=data['fitnessPointData']['cadenceCyclesPerMin']
@@ -50,7 +51,8 @@ def generate_random_data():
             'true_time': str(true_time),
             'activityType':str(activityType),
             'pointStatus': str(pointStatus),
-            'cadence': str(cadence),            
+            'cadence': str(cadence),     
+            'altitude':str(altitude)       
         })
 
         counter+=1

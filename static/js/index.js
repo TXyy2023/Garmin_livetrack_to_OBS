@@ -74,8 +74,10 @@ document.addEventListener("DOMContentLoaded", function () {
 			2
 		)} km`;
 		document.getElementById("During_time").textContent = `During_time: ${data.During_time}`;
+		document.getElementById("altitude").textContent = `altitude: ${data.altitude}`;
 		document.getElementById("true_time").textContent = `true_time: ${data.true_time}`;
-		document.getElementById("position").textContent = `position: ${data.lat + data.lon}`;
+		// document.getElementById("position").textContent = `position: ${data.lat + data.lon}`;
+		document.getElementById("position").textContent = `lat:${data.lat} lon:${data.lon}`;
 		document.getElementById("activityType").textContent = `activityType: ${data.activityType}`;
 		document.getElementById("pointStatus").textContent = `pointStatus: ${data.pointStatus}`;
 		document.getElementById("cadence").textContent = `cadence: ${data.cadence}`;
@@ -169,4 +171,53 @@ document.addEventListener("DOMContentLoaded", function () {
 		animate();
 		// map.getSource("route").setData(geo_in_data_test);
 	});
+});
+
+const dataSource = {
+	chart: {
+		caption: "Nordstorm's Customer Satisfaction Score for 2017",
+		lowerlimit: "0",
+		upperlimit: "100",
+		showvalue: "1",
+		numbersuffix: "%",
+		theme: "gammel",
+		showtooltip: "0",
+	},
+	colorrange: {
+		color: [
+			{
+				minvalue: "0",
+				maxvalue: "50",
+				code: "#F2726F",
+			},
+			{
+				minvalue: "50",
+				maxvalue: "75",
+				code: "#FFC533",
+			},
+			{
+				minvalue: "75",
+				maxvalue: "100",
+				code: "#62B58F",
+			},
+		],
+	},
+	dials: {
+		dial: [
+			{
+				value: "81",
+			},
+		],
+	},
+};
+
+FusionCharts.ready(function () {
+	var myChart = new FusionCharts({
+		type: "angulargauge",
+		renderAt: "chart-container",
+		width: "100%",
+		height: "100%",
+		dataFormat: "json",
+		dataSource,
+	}).render();
 });

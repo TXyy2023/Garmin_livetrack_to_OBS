@@ -56,7 +56,11 @@ body {
     box-shadow: 0.1vw 0.1vw 0.3vw rgba(0, 0, 0, 0.2);
     white-space: nowrap; /* 保持一行显示，不换行 */
 }
-
+#activityType {
+    position: absolute;
+    bottom: 1vw;
+    left:1vw
+}
  /* #map { 
     position: absolute;
     width: 100%; 

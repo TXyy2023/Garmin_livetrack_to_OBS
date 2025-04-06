@@ -7,6 +7,8 @@
     <title>Transparent Overlay</title>
 </head>
 <body>
+    <script type="text/javascript" src="https://cdn.fusioncharts.com/fusioncharts/latest/fusioncharts.js"></script>
+    <script type="text/javascript" src="https://cdn.fusioncharts.com/fusioncharts/latest/themes/fusioncharts.theme.fusion.js"></script>
     <link href="https://api.mapbox.com/mapbox-gl-js/v3.10.0/mapbox-gl.css" rel="stylesheet">
     <script src="https://api.mapbox.com/mapbox-gl-js/v3.10.0/mapbox-gl.js"></script>
     <script src="https://unpkg.com/@turf/turf@6/turf.min.js"></script>
@@ -15,21 +17,25 @@
     <script src="{{ url_for('static', filename='js/index.js') }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.0/socket.io.min.js"></script>
     
-    <div class="corner-text top-left" id="speed">Speed: 0 km/h</div>
-    <div class="corner-text top-right" id="heart_rate">Heart Rate: 0 bpm</div>
+    <div class="corner-text" id="speed">Speed: 0 km/h</div>
+    <div class="corner-text" id="heart_rate">Heart Rate: 0 bpm</div>
+    <div class="corner-text" id="altitude">altitude: 100m</div>
+
+
+
 
 
     <div id="total_data">
-        <div class="corner-text bottom-right" id="true_time">true_time: 00:00:00</div>
-        <div class="corner-text bottom-right" id="During_time">Time: 00:00:00</div>
-        <div class="corner-text bottom-left" id="distance">Distance: 0 km</div>
+        <div class="corner-text" id="true_time">true_time: 00:00:00</div>
+        <div class="corner-text" id="During_time">Time: 00:00:00</div>
+        <div class="corner-text" id="distance">Distance: 0 km</div>
     </div>
 
 
-    <div class="corner-text bottom-right" id="activityType">activityType</div>
-    <div class="corner-text bottom-right" id="pointStatus">pointStatus</div>
+    <div class="corner-text" id="activityType">activityType</div>
+    <div class="corner-text" id="pointStatus">pointStatus</div>
     <!-- 状态==>是否停止 -->
-    <div class="corner-text bottom-right" id="cadence">cadenceCyclesPerMin</div>
+    <div class="corner-text" id="cadence">cadenceCyclesPerMin</div>
 
 
 
@@ -37,6 +43,11 @@
         <div id="map"></div>
         <div id="position">position</div>
     </div>
+
+
+    <div id="chart-container"></div>
+
+
     <!-- <script>
     // const socket = io.connect("http://127.0.0.1:4002");
     // // alert("?");
