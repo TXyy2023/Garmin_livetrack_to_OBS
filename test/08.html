@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>实时折线图</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    #chart_data{
+        position: absolute;
+        top:5vw;
+        left:5vw;
+        width: 20vw;  
+        height: 10vw; 
+    }
+
+  </style>
+</head>
+<body>
+  <h2>实时折线图（每秒更新数据）</h2>
+  <div id="chart_data">
+    <canvas id="myChart"></canvas>
+    </div>
+  <script>
+    // 模拟的数据
+    const data_length=30;
+    let dataPoints = [];
+    let timeLabels = Array.from({ length: data_length+1 }, (_, index) => index);
+
+    // 初始化图表
+    const ctx = document.getElementById('myChart').getContext('2d');
+    const chart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: timeLabels,
+        datasets: [{
+          label: '实时数据',
+          data: dataPoints,
+          borderColor: 'rgba(75, 192, 192, 1)',
+          fill: false,
+          cubicInterpolationMode: 'monotone',
+          tension: 0.1,
+          pointRadius: 0 // 去掉数据点的小圆圈
+        }]
+      },
+      options: {
+        responsive: true,
+        animation: {
+      duration: 0  // 禁用动画
+    },
+        plugins: {
+          legend: {
+            display: false // 隐藏图例
+          }
+        },
+        scales: {
+          x: {
+            type: 'linear',
+            position: 'bottom',
+            grid: {
+              display: false // 隐藏 x 轴网格线
+            },
+            ticks: {
+            //   display: false // 隐藏 x 轴刻度
+            }
+          },
+          y: {
+            grid: {
+            //   display: false // 隐藏 y 轴网格线
+            },
+            ticks: {
+            //   display: false // 隐藏 y 轴刻度
+            }
+          }
+        },
+        elements: {
+          line: {
+            tension: 0.4 // 设置曲线平滑度
+          }
+        }
+      }
+    });
+
+    // 模拟每秒钟接收新的数据
+    let time = 0;
+    setInterval(() => {
+      // 模拟的实时数据（这里使用正弦函数作为示例）
+    //   const newData = Math.sin(time * 0.1) * 10 + 50;
+      const newData = Math.floor(Math.random() * 101); // 随机值
+      // 更新数据点
+      
+      dataPoints.push(newData);
+    //   timeLabels.push(time);
+      // 限制最多显示20个数据点，超出则删除最老的数据
+      if (dataPoints.length >= data_length) {
+        // timeLabels.shift();
+        dataPoints.shift();
+      }
+
+    //   console.log(dataPoints.length)
+    console.log(dataPoints)
+
+      // 更新图表数据
+    //   chart.data.labels = timeLabels;
+      chart.data.datasets[0].data = dataPoints;
+      chart.update(); // 刷新图表
+
+      time++; // 时间递增
+    }, 200); // 每秒更新一次数据
+  </script>
+</body>
+</html>

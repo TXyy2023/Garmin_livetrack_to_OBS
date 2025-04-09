@@ -129,6 +129,13 @@ body {
     width: 100%;
     height:100%
   }
+  #chart_data{
+    position: absolute;
+    top:20vw;
+    left:5vw;
+    width: 20vw;  
+    height: 10vw; 
+}
  /* #map { 
     position: absolute;
     width: 100%; 

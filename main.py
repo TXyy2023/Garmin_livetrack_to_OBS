@@ -3,7 +3,7 @@ from flask_socketio import SocketIO, emit
 import random
 import time
 import json
-from datetime import datetime,timedelta 
+from datetime import datetime,timedelta
 from threading import Thread
 from Garmin_con import get_garmin_data,seconds_to_hms
 app = Flask(__name__, static_folder='static')
@@ -35,9 +35,9 @@ def generate_random_data():
         true_time=data['dateTime']
         dt_object = datetime.strptime(true_time, "%Y-%m-%dT%H:%M:%S.%fZ")
         true_time = dt_object + timedelta(hours=8)
-        altitude=data["altitude"]
         activityType=data['fitnessPointData']['activityType']
         pointStatus=data['fitnessPointData']['pointStatus']
+        altitude=data['altitude']
         # cadence=data['fitnessPointData']['cadenceCyclesPerMin']
         cadence=-1
         # 将数据通过 WebSocket 推送到前端
@@ -51,8 +51,8 @@ def generate_random_data():
             'true_time': str(true_time),
             'activityType':str(activityType),
             'pointStatus': str(pointStatus),
-            'cadence': str(cadence),     
-            'altitude':str(altitude)       
+            'cadence': str(cadence),
+            'altitude':str(altitude)          
         })
 
         counter+=1

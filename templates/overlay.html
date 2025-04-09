@@ -13,11 +13,12 @@
     <script src="https://api.mapbox.com/mapbox-gl-js/v3.10.0/mapbox-gl.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gaugeJS/dist/gauge.min.js"></script>
     <script src="https://unpkg.com/@turf/turf@6/turf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.0/socket.io.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <!-- <script src="https://unpkg.com/@turf/turf/turf.min.js"></script> -->
     <link href="{{ url_for('static', filename='css/index.css') }}" rel="stylesheet">
     <script src="{{ url_for('static', filename='js/index.js') }}"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.0/socket.io.min.js"></script>
-    
+
     <div class="corner-text" id="speed">Speed: 0 km/h</div>
     <div class="corner-text" id="heart_rate">Heart Rate: 0 bpm</div>
     <div class="corner-text" id="altitude">altitude: 100m</div>
@@ -56,6 +57,9 @@
     <div class="running_status">
         <img src="{{ url_for('static', filename='img/cycling.svg') }}" id="status_img">
     </div>
+    <div id="chart_data">
+        <canvas id="myChart"></canvas>
+        </div>
     <!-- <script>
     // const socket = io.connect("http://127.0.0.1:4002");
     // // alert("?");

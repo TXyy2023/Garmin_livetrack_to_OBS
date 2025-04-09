@@ -1,43 +1,9 @@
-var geo_in_data = {
-	type: "Feature",
-	properties: {},
-	geometry: {
-		type: "LineString",
-		coordinates: [
-			[-122.483696, 37.833818],
-			[-122.483482, 37.833174],
-			[-122.483396, 37.8327],
-			[-122.483568, 37.832056],
-			[-122.48404, 37.831141],
-			[-122.48404, 37.830497],
-			[-122.483482, 37.82992],
-			[-122.483568, 37.829548],
-			[-122.48507, 37.829446],
-			[-122.4861, 37.828802],
-			[-122.486958, 37.82931],
-			[-122.487001, 37.830802],
-			[-122.487516, 37.831683],
-			[-122.488031, 37.832158],
-			[-122.488889, 37.832971],
-			[-122.489876, 37.832632],
-			[-122.490434, 37.832937],
-			[-122.49125, 37.832429],
-			[-122.491636, 37.832564],
-			[-122.492237, 37.833378],
-			[-122.493782, 37.833683],
-		],
-	},
-};
-
 const geo_in_data_test = {
 	type: "Feature",
 	properties: {},
 	geometry: {
 		type: "LineString",
-		coordinates: [
-			[116.141190771014, 40.2499238401651],
-			[116.14099547267, 40.2499238401651],
-		],
+		coordinates: [],
 	},
 };
 const point_pos = {
@@ -53,16 +19,22 @@ const point_pos = {
 		},
 	],
 };
+let dataPoints = [];
+var chart;
+const data_length = 30;
 
 function geo_add_data(lon, lat) {
 	// 将新的坐标添加到 geo_in_data.features[0].geometry.coordinates
 	geo_in_data_test.geometry.coordinates.push([lon, lat]);
-
+	if (geo_in_data_test.geometry.coordinates.length == 2) {
+		init_map();
+	}
 	// console.log(geo_in_data_test.geometry.coordinates);
 	return geo_in_data_test; // 返回更新后的 geo_in_data
 }
 
 document.addEventListener("DOMContentLoaded", function () {
+	test_fuc();
 	var opts = {
 		angle: 0, // 0 = 完整圆
 		lineWidth: 0.2,
@@ -201,15 +173,27 @@ document.addEventListener("DOMContentLoaded", function () {
 		document.getElementById(
 			"heartrate_gauge-value"
 		).innerText = `heart_rate: ${data.heart_rate} bpm`;
-	});
 
+		dataPoints.push(parseInt(data.altitude));
+		if (dataPoints.length >= data_length) {
+			// timeLabels.shift();
+			dataPoints.shift();
+		}
+		chart.data.datasets[0].data = dataPoints;
+		chart.update(); // 刷新图表
+	});
+});
+
+function init_map() {
 	mapboxgl.accessToken =
 		"pk.eyJ1IjoiYmJuZHNrb3dlIiwiYSI6ImNtOHhzc2xwdTA5MzAyanIzOHQwdmY4Z3gifQ.PCVJZBjlDOnQIvsADOaVaQ";
+
 	const map = new mapboxgl.Map({
 		container: "map",
 		// Choose from Mapbox's core styles, or make your own style with Mapbox Studio
 		style: "mapbox://styles/mapbox/dark-v11",
-		center: [116.141190771014, 40.2499238401651],
+		// center: [116.141190771014, 40.2499238401651],
+		center: geo_in_data_test.geometry.coordinates[0],
 		zoom: 14,
 		attributionControl: false,
 
@@ -224,7 +208,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	map.on("load", () => {
 		map.addSource("route", {
 			type: "geojson",
-			data: geo_in_data,
+			data: geo_in_data_test,
 		});
 		map.addSource("point", {
 			type: "geojson",
@@ -289,4 +273,92 @@ document.addEventListener("DOMContentLoaded", function () {
 		animate();
 		// map.getSource("route").setData(geo_in_data_test);
 	});
-});
+}
+function init_gauge() {}
+
+function test_fuc() {
+	// 模拟的数据
+	let timeLabels = Array.from({ length: data_length + 1 }, (_, index) => index);
+	// 初始化图表
+	const ctx = document.getElementById("myChart").getContext("2d");
+	chart = new Chart(ctx, {
+		type: "line",
+		data: {
+			labels: timeLabels,
+			datasets: [
+				{
+					label: "实时数据",
+					data: dataPoints,
+					borderColor: "rgba(75, 192, 192, 1)",
+					fill: false,
+					cubicInterpolationMode: "monotone",
+					tension: 0.1,
+					pointRadius: 0, // 去掉数据点的小圆圈
+				},
+			],
+		},
+		options: {
+			responsive: true,
+			animation: {
+				duration: 0, // 禁用动画
+			},
+			plugins: {
+				legend: {
+					display: false, // 隐藏图例
+				},
+			},
+			scales: {
+				x: {
+					type: "linear",
+					position: "bottom",
+					grid: {
+						display: false, // 隐藏 x 轴网格线
+					},
+					ticks: {
+						//   display: false // 隐藏 x 轴刻度
+					},
+				},
+				y: {
+					grid: {
+						//   display: false // 隐藏 y 轴网格线
+					},
+					ticks: {
+						//   display: false // 隐藏 y 轴刻度
+					},
+				},
+			},
+			elements: {
+				line: {
+					tension: 0.4, // 设置曲线平滑度
+				},
+			},
+		},
+	});
+
+	// 模拟每秒钟接收新的数据
+	let time = 0;
+	// setInterval(() => {
+	// 	// 模拟的实时数据（这里使用正弦函数作为示例）
+	// 	//   const newData = Math.sin(time * 0.1) * 10 + 50;
+	// 	const newData = Math.floor(Math.random() * 101); // 随机值
+	// 	// 更新数据点
+
+	// 	dataPoints.push(newData);
+	// 	//   timeLabels.push(time);
+	// 	// 限制最多显示20个数据点，超出则删除最老的数据
+	// 	if (dataPoints.length >= data_length) {
+	// 		// timeLabels.shift();
+	// 		dataPoints.shift();
+	// 	}
+
+	// 	//   console.log(dataPoints.length)
+	// 	console.log(dataPoints);
+
+	// 	// 更新图表数据
+	// 	//   chart.data.labels = timeLabels;
+	// 	chart.data.datasets[0].data = dataPoints;
+	// 	chart.update(); // 刷新图表
+
+	// 	time++; // 时间递增
+	// }, 200); // 每秒更新一次数据
+}
