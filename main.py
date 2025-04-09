@@ -3,7 +3,7 @@ from flask_socketio import SocketIO, emit
 import random
 import time
 import json
-from datetime import datetime,timedelta
+from datetime import datetime,timedelta 
 from threading import Thread
 from Garmin_con import get_garmin_data,seconds_to_hms
 app = Flask(__name__, static_folder='static')

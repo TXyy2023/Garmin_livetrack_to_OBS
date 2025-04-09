@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gauge.js 左下角带刻度示例</title>
+  <script src="https://cdn.jsdelivr.net/npm/gaugeJS/dist/gauge.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background: #f0f2f5;
+      position: relative;
+    }
+    #speed_gauge-container {
+    position: absolute;
+    bottom: 5vw;
+    left: 5vw;
+    width: 25vw;
+    height: 25vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+  }
+#speed_gauge-value {
+    font-size: 1.5vw;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1vw;
+  }
+#speed_gauge {
+    width: 100%;
+    height: auto;
+  }
+  </style>
+</head>
+<body>
+
+  <div id="speed_gauge-container">
+    <div id="speed_gauge-value">0</div> <!-- 这里是数值显示 -->
+    <canvas id="speed_gauge"></canvas>
+</div>
+
+<script>
+	var opts = {
+		angle: 0, // 0 = 完整圆
+		lineWidth: 0.2,
+		radiusScale: 1,
+		pointer: {
+			length: 0.6,
+			strokeWidth: 0.04,
+			color: "#000000",
+		},
+		limitMax: false,
+		limitMin: false,
+		colorStart: "#20538C",
+		colorStop: "#20538C",
+		strokeColor: "#E0E0E0",
+		generateGradient: true,
+		highDpiSupport: true,
+
+		// 添加 staticLabels
+		staticLabels: {
+			font: "12px sans-serif", // 刻度字体
+			labels: [0, 10, 20, 30, 40, 50, 60], // 需要显示的刻度值
+			color: "#000", // 刻度字体颜色
+			fractionDigits: 0, // 小数位数
+		},
+		renderTicks: {
+			divisions: 6,
+			divWidth: 1.1,
+			divLength: 0.7,
+			divColor: "#333333",
+			subDivisions: 10,
+			subLength: 0.5,
+			subWidth: 0.6,
+			subColor: "#666666",
+		},
+		// 不需要 staticZones
+		// staticZones: []
+	};
+
+	var target = document.getElementById("speed_gauge");
+	var gauge1 = new Gauge(target).setOptions(opts);
+
+	gauge1.maxValue = 60;
+	gauge1.setMinValue(0);
+	gauge1.animationSpeed = 32;
+
+	// 初始设置
+	var currentValue = 25;
+	gauge1.set(currentValue);
+
+	// 同步显示上方的数值
+	document.getElementById("speed_gauge-value").innerText = currentValue;
+  setInterval(() => {
+    currentValue = Math.floor(Math.random() * 201); // 随机值
+    gauge.set(currentValue);
+    document.getElementById('speed_gauge-value').innerText = currentValue;
+  }, 2000);
+</script>
+
+</body>
+</html>

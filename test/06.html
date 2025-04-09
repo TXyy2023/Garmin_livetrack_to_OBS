@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>动态修改 FusionCharts 仪表盘</title>
+  <!-- 引入 FusionCharts 库 -->
+  <script type="text/javascript" src="https://cdn.fusioncharts.com/fusioncharts/latest/fusioncharts.js"></script>
+  <script type="text/javascript" src="https://cdn.fusioncharts.com/fusioncharts/latest/themes/fusioncharts.theme.candy.js"></script>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;  
+    }
+    #chart-container {
+      width: 40vw;
+      height: 40vw;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div id="chart-container"></div>
+<button onclick="updateChart()">更新仪表盘</button>
+
+<script type="text/javascript">
+  // 初始数据源
+  const dataSource = {
+    chart: {
+    bgcolor: "FFFFFF",   // 背景色白
+    bgalpha: "0",         // 完全透明
+      captionpadding: "0",
+      origw: "300",
+      origh: "300",
+      gaugeouterradius: "115",
+      gaugestartangle: "270",
+      gaugeendangle: "-25",
+      showvalue: "1",
+      valuefontsize: "30",
+      majortmnumber: "13",
+      majortmthickness: "2",
+      majortmheight: "13",
+      minortmheight: "7",
+      minortmthickness: "1",
+      minortmnumber: "1",
+      showgaugeborder: "0",
+      theme: "gammel"
+    },
+    colorrange: {
+      color: [
+        {
+          minvalue: "0",
+          maxvalue: "110",
+          code: "#999999"
+        },
+        {
+          minvalue: "110",
+          maxvalue: "280",
+          code: "#F6F6F6"
+        }
+      ]
+    },
+    dials: {
+      dial: [
+        {
+          value: "110",
+          bgcolor: "#F20F2F",
+          basewidth: "8"
+        }
+      ]
+    },
+    annotations: {
+      groups: [
+        {
+          items: [
+            {
+              type: "text",
+              id: "text",
+              text: "mph",
+              x: "$gaugeCenterX",
+              y: "$gaugeCenterY + 40",
+              fontsize: "20",
+              color: "#555555"
+            }
+          ]
+        }
+      ]
+    }
+  };
+
+  let myChart;
+
+  // 初始化图表
+  FusionCharts.ready(function() {
+    myChart = new FusionCharts({
+      type: "angulargauge",
+      renderAt: "chart-container",
+      width: "100%",
+      height: "100%",
+      dataFormat: "json",
+      dataSource: dataSource
+    }).render();
+  });
+
+  // 更新图表函数
+  function updateChart() {
+    var random_num=String(Math.floor(Math.random() * 280))
+    // 修改指针值
+    dataSource.dials.dial[0].value =random_num ; // 随机一个 0-280 的值
+    // 修改单位文字
+    dataSource.annotations.groups[0].items[0].text = "km/h";
+    // 修改颜色范围（举例）
+    dataSource.colorrange.color[0].maxvalue = random_num;
+    dataSource.colorrange.color[1].minvalue = random_num;
+    // dataSource.colorrange.color[1].maxvalue = "300";
+    // 更新图表
+    myChart.setJSONData(dataSource);
+  }
+</script>
+
+</body>
+</html>
