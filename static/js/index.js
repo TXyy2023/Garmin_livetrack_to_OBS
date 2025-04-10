@@ -23,122 +23,39 @@ let dataPoints = [];
 var chart;
 const data_length = 30;
 
+var gauge1;
+var gauge2;
+var isMapOn = false;
+
 function geo_add_data(lon, lat) {
 	// 将新的坐标添加到 geo_in_data.features[0].geometry.coordinates
 	geo_in_data_test.geometry.coordinates.push([lon, lat]);
-	if (geo_in_data_test.geometry.coordinates.length == 2) {
-		init_map();
+	if (geo_in_data_test.geometry.coordinates.length >= 2) {
+		if (isMapOn == false) {
+			isMapOn = true;
+			init_map();
+		}
+
+		var lastTwo_altitude = dataPoints.slice(-2);
+		var lastTwo_lon_lat = geo_in_data_test.geometry.coordinates.slice(-2);
+		// console.log(lastTwo_altitude);
+		var result = calculateSlope(
+			lastTwo_lon_lat[0][1],
+			lastTwo_lon_lat[0][0],
+			lastTwo_altitude[0],
+			lastTwo_lon_lat[1][1],
+			lastTwo_lon_lat[1][0],
+			lastTwo_altitude[1]
+		);
+		console.log(result);
 	}
 	// console.log(geo_in_data_test.geometry.coordinates);
 	return geo_in_data_test; // 返回更新后的 geo_in_data
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-	test_fuc();
-	var opts = {
-		angle: 0, // 0 = 完整圆
-		lineWidth: 0.2,
-		radiusScale: 1,
-		pointer: {
-			length: 0.6,
-			strokeWidth: 0.04,
-			color: "#000000",
-		},
-		limitMax: false,
-		limitMin: false,
-		colorStart: "#20538C",
-		colorStop: "#20538C",
-		strokeColor: "#E0E0E0",
-		generateGradient: true,
-		highDpiSupport: true,
-
-		// 添加 staticLabels
-		staticLabels: {
-			font: "12px sans-serif", // 刻度字体
-			labels: [0, 10, 20, 30, 40, 50, 60], // 需要显示的刻度值
-			color: "#000", // 刻度字体颜色
-			fractionDigits: 0, // 小数位数
-		},
-		renderTicks: {
-			divisions: 6,
-			divWidth: 1.1,
-			divLength: 0.7,
-			divColor: "#333333",
-			subDivisions: 10,
-			subLength: 0.5,
-			subWidth: 0.6,
-			subColor: "#666666",
-		},
-		// 不需要 staticZones
-		// staticZones: []
-	};
-
-	var target = document.getElementById("speed_gauge");
-	var gauge1 = new Gauge(target).setOptions(opts);
-
-	gauge1.maxValue = 60;
-	gauge1.setMinValue(0);
-	gauge1.animationSpeed = 32;
-
-	// 初始设置
-	var currentValue = 25;
-	gauge1.set(currentValue);
-
-	// 同步显示上方的数值
-	document.getElementById("speed_gauge-value").innerText = currentValue;
-
-	var opts = {
-		angle: -0.25, // 0 = 完整圆
-		lineWidth: 0.2,
-		radiusScale: 1,
-		pointer: {
-			length: 0.6,
-			strokeWidth: 0.04,
-			color: "#000000",
-		},
-		limitMax: false,
-		limitMin: false,
-		colorStart: "#20538C",
-		colorStop: "#20538C",
-		strokeColor: "#E0E0E0",
-		generateGradient: true,
-		highDpiSupport: true,
-
-		// 添加 staticLabels
-		staticLabels: {
-			font: "12px sans-serif", // 刻度字体
-			labels: [0, 20, 40, 60, 80, 100, 120, 140, 160, 180, 200], // 需要显示的刻度值
-			color: "#000", // 刻度字体颜色
-			fractionDigits: 0, // 小数位数
-		},
-		renderTicks: {
-			divisions: 10,
-			divWidth: 1.1,
-			divLength: 0.7,
-			divColor: "#333333",
-			subDivisions: 5,
-			subLength: 0.5,
-			subWidth: 0.6,
-			subColor: "#666666",
-		},
-		// 不需要 staticZones
-		// staticZones: []
-	};
-
-	var target = document.getElementById("heartrate_gauge");
-	var gauge2 = new Gauge(target).setOptions(opts);
-
-	gauge2.maxValue = 200;
-	gauge2.setMinValue(0);
-	gauge2.animationSpeed = 32;
-
-	// 初始设置
-	var currentValue = 25;
-	gauge2.set(currentValue);
-
-	// 同步显示上方的数值
-	document.getElementById("heartrate_gauge-value").innerText = currentValue;
-
+	init_line_gauge();
+	init_gauge();
 	//   示例：动态更新数值
 	// setInterval(() => {
 	// 	currentValue = Math.floor(Math.random() * 201); // 随机值
@@ -148,7 +65,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	// 确保 DOM 加载完成后再执行代码
 	const socket = io.connect("http://127.0.0.1:4002");
-
 	// 当接收到新数据时，更新界面
 	socket.on("update_data", function (data) {
 		document.getElementById("speed").textContent = `Speed: ${data.speed} km/h`;
@@ -162,25 +78,26 @@ document.addEventListener("DOMContentLoaded", function () {
 		// document.getElementById("position").textContent = `position: ${data.lat + data.lon}`;
 		document.getElementById("position").textContent = `lat:${data.lat} lon:${data.lon}`;
 		document.getElementById("activityType").textContent = `activityType: ${data.activityType}`;
-		document.getElementById("pointStatus").textContent = `pointStatus: ${data.pointStatus}`;
-		document.getElementById("cadence").textContent = `cadence: ${data.cadence}`;
+		// document.getElementById("pointStatus").textContent = `pointStatus: ${data.pointStatus}`;
+		// document.getElementById("cadence").textContent = `cadence: ${data.cadence}`;
 		// console.log(data);
-		geo_add_data(parseFloat(data.lon), parseFloat(data.lat));
 
-		gauge1.set(parseInt(data.speed));
+		gauge1.set(parseFloat(data.speed));
 		document.getElementById("speed_gauge-value").innerText = `Speed: ${data.speed} km/h`;
 		gauge2.set(parseInt(data.heart_rate));
 		document.getElementById(
 			"heartrate_gauge-value"
 		).innerText = `heart_rate: ${data.heart_rate} bpm`;
 
-		dataPoints.push(parseInt(data.altitude));
+		dataPoints.push(parseFloat(data.altitude));
 		if (dataPoints.length >= data_length) {
 			// timeLabels.shift();
 			dataPoints.shift();
 		}
 		chart.data.datasets[0].data = dataPoints;
 		chart.update(); // 刷新图表
+
+		geo_add_data(parseFloat(data.lon), parseFloat(data.lat));
 	});
 });
 
@@ -274,9 +191,114 @@ function init_map() {
 		// map.getSource("route").setData(geo_in_data_test);
 	});
 }
-function init_gauge() {}
 
-function test_fuc() {
+function init_gauge() {
+	var opts = {
+		angle: 0, // 0 = 完整圆
+		lineWidth: 0.2,
+		radiusScale: 1,
+		pointer: {
+			length: 0.6,
+			strokeWidth: 0.04,
+			color: "#000000",
+		},
+		limitMax: false,
+		limitMin: false,
+		colorStart: "#20538C",
+		colorStop: "#20538C",
+		strokeColor: "#E0E0E0",
+		generateGradient: true,
+		highDpiSupport: true,
+
+		// 添加 staticLabels
+		staticLabels: {
+			font: "12px sans-serif", // 刻度字体
+			labels: [0, 10, 20, 30, 40, 50, 60], // 需要显示的刻度值
+			color: "#000", // 刻度字体颜色
+			fractionDigits: 0, // 小数位数
+		},
+		renderTicks: {
+			divisions: 6,
+			divWidth: 1.1,
+			divLength: 0.7,
+			divColor: "#333333",
+			subDivisions: 10,
+			subLength: 0.5,
+			subWidth: 0.6,
+			subColor: "#666666",
+		},
+		// 不需要 staticZones
+		// staticZones: []
+	};
+
+	var target = document.getElementById("speed_gauge");
+	gauge1 = new Gauge(target).setOptions(opts);
+
+	gauge1.maxValue = 60;
+	gauge1.setMinValue(0);
+	gauge1.animationSpeed = 32;
+
+	// 初始设置
+	var currentValue = 5;
+	gauge1.set(currentValue);
+
+	// 同步显示上方的数值
+	document.getElementById("speed_gauge-value").innerText = currentValue;
+
+	var opts = {
+		angle: -0.25, // 0 = 完整圆
+		lineWidth: 0.2,
+		radiusScale: 1,
+		pointer: {
+			length: 0.6,
+			strokeWidth: 0.04,
+			color: "#000000",
+		},
+		limitMax: false,
+		limitMin: false,
+		colorStart: "#20538C",
+		colorStop: "#20538C",
+		strokeColor: "#E0E0E0",
+		generateGradient: true,
+		highDpiSupport: true,
+
+		// 添加 staticLabels
+		staticLabels: {
+			font: "12px sans-serif", // 刻度字体
+			labels: [0, 20, 40, 60, 80, 100, 120, 140, 160, 180, 200], // 需要显示的刻度值
+			color: "#000", // 刻度字体颜色
+			fractionDigits: 0, // 小数位数
+		},
+		renderTicks: {
+			divisions: 10,
+			divWidth: 1.1,
+			divLength: 0.7,
+			divColor: "#333333",
+			subDivisions: 5,
+			subLength: 0.5,
+			subWidth: 0.6,
+			subColor: "#666666",
+		},
+		// 不需要 staticZones
+		// staticZones: []
+	};
+
+	var target = document.getElementById("heartrate_gauge");
+	gauge2 = new Gauge(target).setOptions(opts);
+
+	gauge2.maxValue = 200;
+	gauge2.setMinValue(0);
+	gauge2.animationSpeed = 32;
+
+	// 初始设置
+	var currentValue = 5;
+	gauge2.set(currentValue);
+
+	// 同步显示上方的数值
+	document.getElementById("heartrate_gauge-value").innerText = currentValue;
+}
+
+function init_line_gauge() {
 	// 模拟的数据
 	let timeLabels = Array.from({ length: data_length + 1 }, (_, index) => index);
 	// 初始化图表
@@ -361,4 +383,61 @@ function test_fuc() {
 
 	// 	time++; // 时间递增
 	// }, 200); // 每秒更新一次数据
+}
+
+function toRadians(degrees) {
+	return (degrees * Math.PI) / 180;
+}
+
+function calculateSlope(lat1, lon1, ele1, lat2, lon2, ele2) {
+	const R = 6371000; // 地球半径（米）
+
+	const φ1 = toRadians(lat1);
+	const φ2 = toRadians(lat2);
+	const Δφ = toRadians(lat2 - lat1);
+	const Δλ = toRadians(lon2 - lon1);
+
+	const a =
+		Math.sin(Δφ / 2) * Math.sin(Δφ / 2) +
+		Math.cos(φ1) * Math.cos(φ2) * Math.sin(Δλ / 2) * Math.sin(Δλ / 2);
+	const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+	const horizontalDistance = R * c;
+
+	const elevationChange = ele2 - ele1;
+
+	const slopePercent = (elevationChange / horizontalDistance) * 100;
+	const slopeAngle = Math.atan2(elevationChange, horizontalDistance) * (180 / Math.PI);
+
+	return {
+		horizontalDistance: horizontalDistance.toFixed(2),
+		elevationChange: elevationChange.toFixed(2),
+		slopePercent: slopePercent.toFixed(2),
+		slopeAngle: slopeAngle.toFixed(2),
+	};
+}
+
+function calculate() {
+	const lat1 = parseFloat(document.getElementById("lat1").value);
+	const lon1 = parseFloat(document.getElementById("lon1").value);
+	const ele1 = parseFloat(document.getElementById("ele1").value);
+
+	const lat2 = parseFloat(document.getElementById("lat2").value);
+	const lon2 = parseFloat(document.getElementById("lon2").value);
+	const ele2 = parseFloat(document.getElementById("ele2").value);
+
+	if (isNaN(lat1) || isNaN(lon1) || isNaN(ele1) || isNaN(lat2) || isNaN(lon2) || isNaN(ele2)) {
+		document.getElementById("result").innerHTML =
+			"<span style='color: red;'>请输入所有字段！</span>";
+		return;
+	}
+
+	const result = calculateSlope(lat1, lon1, ele1, lat2, lon2, ele2);
+
+	document.getElementById("result").innerHTML = `
+        <h3>计算结果：</h3>
+        <p><strong>水平距离：</strong> ${result.horizontalDistance} 米</p>
+        <p><strong>高程变化：</strong> ${result.elevationChange} 米</p>
+        <p><strong>坡度百分比：</strong> ${result.slopePercent} %</p>
+        <p><strong>坡度角度：</strong> ${result.slopeAngle} °</p>
+    `;
 }

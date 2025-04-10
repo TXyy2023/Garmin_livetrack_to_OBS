@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>坡度计算器</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input {
+            width: 150px;
+            padding: 5px;
+            margin-top: 5px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+        }
+        #result {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            width: 400px;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+
+<h2>坡度计算器</h2>
+
+<label>起点纬度 (lat1):
+    <input type="number" id="lat1" step="any">
+</label>
+<label>起点经度 (lon1):
+    <input type="number" id="lon1" step="any">
+</label>
+<label>起点海拔 (ele1) (米):
+    <input type="number" id="ele1" step="any">
+</label>
+
+<label>终点纬度 (lat2):
+    <input type="number" id="lat2" step="any">
+</label>
+<label>终点经度 (lon2):
+    <input type="number" id="lon2" step="any">
+</label>
+<label>终点海拔 (ele2) (米):
+    <input type="number" id="ele2" step="any">
+</label>
+
+<button onclick="calculate()">计算坡度</button>
+
+<div id="result"></div>
+
+<script>
+function toRadians(degrees) {
+    return degrees * Math.PI / 180;
+}
+
+function calculateSlope(lat1, lon1, ele1, lat2, lon2, ele2) {
+    const R = 6371000; // 地球半径（米）
+
+    const φ1 = toRadians(lat1);
+    const φ2 = toRadians(lat2);
+    const Δφ = toRadians(lat2 - lat1);
+    const Δλ = toRadians(lon2 - lon1);
+
+    const a = Math.sin(Δφ / 2) * Math.sin(Δφ / 2) +
+              Math.cos(φ1) * Math.cos(φ2) *
+              Math.sin(Δλ / 2) * Math.sin(Δλ / 2);
+    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+    const horizontalDistance = R * c;
+
+    const elevationChange = ele2 - ele1;
+
+    const slopePercent = (elevationChange / horizontalDistance) * 100;
+    const slopeAngle = Math.atan2(elevationChange, horizontalDistance) * (180 / Math.PI);
+
+    return {
+        horizontalDistance: horizontalDistance.toFixed(2),
+        elevationChange: elevationChange.toFixed(2),
+        slopePercent: slopePercent.toFixed(2),
+        slopeAngle: slopeAngle.toFixed(2)
+    };
+}
+
+function calculate() {
+    const lat1 = parseFloat(document.getElementById('lat1').value);
+    const lon1 = parseFloat(document.getElementById('lon1').value);
+    const ele1 = parseFloat(document.getElementById('ele1').value);
+
+    const lat2 = parseFloat(document.getElementById('lat2').value);
+    const lon2 = parseFloat(document.getElementById('lon2').value);
+    const ele2 = parseFloat(document.getElementById('ele2').value);
+
+    if (isNaN(lat1) || isNaN(lon1) || isNaN(ele1) ||
+        isNaN(lat2) || isNaN(lon2) || isNaN(ele2)) {
+        document.getElementById('result').innerHTML = "<span style='color: red;'>请输入所有字段！</span>";
+        return;
+    }
+
+    const result = calculateSlope(lat1, lon1, ele1, lat2, lon2, ele2);
+
+    document.getElementById('result').innerHTML = `
+        <h3>计算结果：</h3>
+        <p><strong>水平距离：</strong> ${result.horizontalDistance} 米</p>
+        <p><strong>高程变化：</strong> ${result.elevationChange} 米</p>
+        <p><strong>坡度百分比：</strong> ${result.slopePercent} %</p>
+        <p><strong>坡度角度：</strong> ${result.slopeAngle} °</p>
+    `;
+}
+</script>
+
+</body>
+</html>

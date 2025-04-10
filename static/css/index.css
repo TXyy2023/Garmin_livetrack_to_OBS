@@ -136,6 +136,9 @@ body {
     width: 20vw;  
     height: 10vw; 
 }
+.hidden {
+  display: none;
+}
  /* #map { 
     position: absolute;
     width: 100%; 

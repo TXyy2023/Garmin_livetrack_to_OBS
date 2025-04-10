@@ -10,7 +10,7 @@ app = Flask(__name__, static_folder='static')
 socketio = SocketIO(app)
 
 
-# 模拟生成随机数据
+
 def generate_random_data():
     counter=0
     while True:
@@ -33,7 +33,9 @@ def generate_random_data():
         lat=data['position']['lat']
         lon=data['position']['lon']
         true_time=data['dateTime']
-        dt_object = datetime.strptime(true_time, "%Y-%m-%dT%H:%M:%S.%fZ")
+        dt_object = datetime.strptime(true_time, "%Y-%m-%dT%H:%M:%S.%fZ"
+                                      
+                                      
         true_time = dt_object + timedelta(hours=8)
         activityType=data['fitnessPointData']['activityType']
         pointStatus=data['fitnessPointData']['pointStatus']
