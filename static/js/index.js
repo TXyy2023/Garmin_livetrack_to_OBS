@@ -56,6 +56,7 @@ function geo_add_data(lon, lat) {
 document.addEventListener("DOMContentLoaded", function () {
 	init_line_gauge();
 	init_gauge();
+	init_time();
 	//   示例：动态更新数值
 	// setInterval(() => {
 	// 	currentValue = Math.floor(Math.random() * 201); // 随机值
@@ -73,8 +74,8 @@ document.addEventListener("DOMContentLoaded", function () {
 			2
 		)} km`;
 		document.getElementById("During_time").textContent = `运动时间: ${data.During_time}`;
-		document.getElementById("altitude").textContent = `altitude: ${data.altitude}`;
-		document.getElementById("true_time").textContent = `${data.true_time}`;
+		document.getElementById("altitude").textContent = `海拔: ${data.altitude}`;
+		// document.getElementById("true_time").textContent = `${data.true_time}`;
 		// document.getElementById("position").textContent = `position: ${data.lat + data.lon}`;
 		document.getElementById("position").textContent = `lat:${data.lat} lon:${data.lon}`;
 		document.getElementById("activityType").textContent = `activityType: ${data.activityType}`;
@@ -83,11 +84,9 @@ document.addEventListener("DOMContentLoaded", function () {
 		// console.log(data);
 
 		gauge1.set(parseFloat(data.speed));
-		document.getElementById("speed_gauge-value").innerText = `Speed: ${data.speed} km/h`;
+		document.getElementById("speed_gauge-value").innerText = `速度: ${data.speed} km/h`;
 		gauge2.set(parseInt(data.heart_rate));
-		document.getElementById(
-			"heartrate_gauge-value"
-		).innerText = `heart_rate: ${data.heart_rate} bpm`;
+		document.getElementById("heartrate_gauge-value").innerText = `心率: ${data.heart_rate} bpm`;
 
 		dataPoints.push(parseFloat(data.altitude));
 		if (dataPoints.length >= data_length) {
@@ -322,8 +321,13 @@ function init_line_gauge() {
 		options: {
 			responsive: true,
 			animation: {
-				duration: 0, // 禁用动画
+				// 	duration: 0, // 禁用动画
+				duration: 1000, // 动画持续时间（毫秒）
+				easing: "easeOutQuart", // 动画缓动函数（变化曲线）
+				delay: 0, // 动画开始前的延迟时间（毫秒）
+				loop: false, // 是否循环播放动画
 			},
+
 			plugins: {
 				legend: {
 					display: false, // 隐藏图例
@@ -385,6 +389,22 @@ function init_line_gauge() {
 	// }, 200); // 每秒更新一次数据
 }
 
+function init_time() {
+	function updateClock() {
+		const now = new Date();
+		const h = String(now.getHours()).padStart(2, "0");
+		const m = String(now.getMinutes()).padStart(2, "0");
+		const s = String(now.getSeconds()).padStart(2, "0");
+		document.getElementById("true_time").innerText = `${h}:${m}:${s}`;
+		const year = now.getFullYear();
+		const month = String(now.getMonth() + 1).padStart(2, "0"); // 月份从0开始，要+1
+		const day = String(now.getDate()).padStart(2, "0");
+		document.getElementById("date").innerText = `${year}年${month}月${day}日`;
+	}
+
+	setInterval(updateClock, 1000);
+	updateClock(); // 初始运行一次
+}
 function toRadians(degrees) {
 	return (degrees * Math.PI) / 180;
 }

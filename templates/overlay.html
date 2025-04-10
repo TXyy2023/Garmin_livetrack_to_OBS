@@ -28,9 +28,11 @@
 
 
     <div id="total_data">
-        <div class="total_data_font" id="true_time">true_time: 00:00:00</div>
-        <div class="total_data_font" id="During_time">Time: 00:00:00</div>
-        <div class="total_data_font" id="distance">Distance: 0 km</div>
+        <!-- <div class="total_data_font" id="true_time">true_time: 00:00:00</div> -->
+        <div id="true_time">00:00:00</div>
+        <div id="date">01月01日</div>
+        <div class="corner-text" id="During_time">Time: 00:00:00</div>
+        <div class="corner-text " id="distance">Distance: 0 km</div>
     </div>
 
 
@@ -42,7 +44,7 @@
 
 
     <div id="map_container">
-        <div id="position">position</div>
+        <div id="position" class="hidden">position</div>
         <div id="map"></div>
     </div>
 
@@ -57,20 +59,11 @@
     <div class="running_status">
         <img src="{{ url_for('static', filename='img/cycling.svg') }}" id="status_img">
     </div>
+
+    <div class="corner-text" id="altitude">altitude: 100m</div>
     <div id="chart_data">
-        <div class="corner-text" id="altitude">altitude: 100m</div>
+
         <canvas id="myChart"></canvas>
     </div>
-    <!-- <script>
-    // const socket = io.connect("http://127.0.0.1:4002");
-    // // alert("?");
-    // // 当接收到新数据时，更新界面
-    // socket.on("update_data", function (data) {
-    //     document.getElementById("speed").textContent = data.speed;
-    //     document.getElementById("heart_rate").textContent = data.heart_rate;
-    //     document.getElementById("distance").textContent = data.distance;
-    //     document.getElementById("time").textContent = data.time;
-    // });
-    </script> -->
 </body>
 </html>

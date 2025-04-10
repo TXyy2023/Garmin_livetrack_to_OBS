@@ -11,7 +11,7 @@ body {
 }
 
 .corner-text {
-    /* position: absolute; */
+    position: absolute;
     color: white;
     font-size: 2vw; /* 根据屏幕宽度调整字体大小 */
     font-family: Arial, sans-serif;
@@ -19,21 +19,8 @@ body {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
-#total_data {
-    position: absolute;
-    top:2vw;
-    right:1.5vw
-}
 
 
-.total_data_font {
-    font-size: 1.5vw;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.5); /* 半透明黑色背景，便于阅读 */
-    padding: 0.5vw 1vw;
-    border-radius: 1vw;
-    white-space: nowrap;
-}
 
 
 
@@ -123,7 +110,7 @@ body {
     width: 4vw;
     height: 4vw;
     position: absolute;
-    right: 1.5vw;
+    left: 1.5vw;
     top:13vw
   }
   #status_img{
@@ -139,6 +126,36 @@ body {
 }
 .hidden {
   display: none;
+}
+#true_time {
+  position: absolute;
+  top:1.5vw;
+  right:0.5vw;
+  font-size: 2vw;
+  font-weight: bolder;
+  color: #333;
+  user-select: none;
+}
+#date {
+position: absolute;
+top:0.25vw;
+right:0.5vw;
+font-size: 1.5vw;
+color: #666;
+ user-select: none;
+}
+#During_time{
+  top: 3vw;
+  right: 0.5vw;
+}
+#distance{
+  top: 5vw;
+  right: 0.5vw;
+}
+#altitude{
+  right: 4.5vw;
+  top: 30vw;
+
 }
  /* #map { 
     position: absolute;

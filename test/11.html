@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Clock with Date</title>
+  <style>
+
+    #true_time {
+      position: absolute;
+      top:1.5vw;
+      right:0.5vw;
+      font-size: 2vw;
+      font-weight: bolder;
+      color: #333;
+      user-select: none;
+    }
+    #date {
+    position: absolute;
+    top:0.25vw;
+    right:0.5vw;
+    font-size: 1.5vw;
+    color: #666;
+     user-select: none;
+    }
+  </style>
+</head>
+<body>
+
+<div id="true_time">00:00:00</div>
+<div id="date">01月01日</div>
+
+<script>
+function updateClock() {
+  const now = new Date();
+  const h = String(now.getHours()).padStart(2, '0');
+  const m = String(now.getMinutes()).padStart(2, '0');
+  const s = String(now.getSeconds()).padStart(2, '0');
+  document.getElementById('true_time').innerText = `${h}:${m}:${s}`;
+
+  const month = String(now.getMonth() + 1).padStart(2, '0'); // 月份从0开始，要+1
+  const day = String(now.getDate()).padStart(2, '0');
+  document.getElementById('date').innerText = `${month}月${day}日`;
+}
+
+setInterval(updateClock, 1000);
+updateClock(); // 初始运行一次
+</script>
+
+</body>
+</html>

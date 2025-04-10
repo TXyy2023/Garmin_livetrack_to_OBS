@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Clock Example</title>
+  <style>
+
+    #clock {
+      position: absolute;
+      top:0.5vw;
+      right:0.5vw;
+      font-size: 2vw;
+      font-weight: bolder;
+      color: #333;
+      text-shadow: 0 0 5px rgba(0,0,0,0.2);
+      user-select: none;
+    }
+  </style>
+</head>
+<body>
+
+<div id="clock">00:00:00</div>
+
+<script>
+function updateClock() {
+  const now = new Date();
+  const h = String(now.getHours()).padStart(2, '0');
+  const m = String(now.getMinutes()).padStart(2, '0');
+  const s = String(now.getSeconds()).padStart(2, '0');
+  document.getElementById('clock').innerText = `${h}:${m}:${s}`;
+}
+
+setInterval(updateClock, 1000);
+updateClock(); // 初始运行一次，避免页面打开要等1秒
+</script>
+
+</body>
+</html>
