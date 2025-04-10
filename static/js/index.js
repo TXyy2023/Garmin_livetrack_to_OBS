@@ -21,7 +21,7 @@ const point_pos = {
 };
 let dataPoints = [];
 var chart;
-const data_length = 30;
+const data_length = 100;
 
 var gauge1;
 var gauge2;
@@ -69,12 +69,12 @@ document.addEventListener("DOMContentLoaded", function () {
 	socket.on("update_data", function (data) {
 		document.getElementById("speed").textContent = `Speed: ${data.speed} km/h`;
 		document.getElementById("heart_rate").textContent = `heart_rate: ${data.heart_rate} bpm`;
-		document.getElementById("distance").textContent = `distance: ${(data.distance / 1000).toFixed(
+		document.getElementById("distance").textContent = `运动距离: ${(data.distance / 1000).toFixed(
 			2
 		)} km`;
-		document.getElementById("During_time").textContent = `During_time: ${data.During_time}`;
+		document.getElementById("During_time").textContent = `运动时间: ${data.During_time}`;
 		document.getElementById("altitude").textContent = `altitude: ${data.altitude}`;
-		document.getElementById("true_time").textContent = `true_time: ${data.true_time}`;
+		document.getElementById("true_time").textContent = `${data.true_time}`;
 		// document.getElementById("position").textContent = `position: ${data.lat + data.lon}`;
 		document.getElementById("position").textContent = `lat:${data.lat} lon:${data.lon}`;
 		document.getElementById("activityType").textContent = `activityType: ${data.activityType}`;
@@ -337,7 +337,7 @@ function init_line_gauge() {
 						display: false, // 隐藏 x 轴网格线
 					},
 					ticks: {
-						//   display: false // 隐藏 x 轴刻度
+						display: false, // 隐藏 x 轴刻度
 					},
 				},
 				y: {

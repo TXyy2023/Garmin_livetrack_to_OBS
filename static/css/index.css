@@ -13,7 +13,7 @@ body {
 .corner-text {
     /* position: absolute; */
     color: white;
-    font-size: 3vw; /* 根据屏幕宽度调整字体大小 */
+    font-size: 2vw; /* 根据屏幕宽度调整字体大小 */
     font-family: Arial, sans-serif;
     font-weight: bold;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
@@ -39,16 +39,16 @@ body {
 
 #map_container {
     position: absolute;
-    bottom: 4vw;
-    right: 1.5vw;
+    bottom: 0.5vw;
+    right: 0.5vw;
 }
 
 #map {
     position: absolute;
     bottom: 0;
     right: 0;
-    width: 20vw;
-    height: 20vw;
+    width: 18vw;
+    height: 18vw;
     border: 0.2vw solid #333;
     border-radius: 0.5vw;
     box-shadow: 0.1vw 0.1vw 0.5vw rgba(0, 0, 0, 0.3);
@@ -58,8 +58,9 @@ body {
 
 #position {
     position: absolute;
-    bottom: -3vw; /* 距离 map 底部一定距离，根据自己调整 */
-    right: -0.8vw;
+    bottom: 19vw;
+    right: 0.2vw;
+
     padding: 0.5vw 1vw;
     background: rgba(255, 255, 255, 0.8);
     border: 0.1vw solid #333;
@@ -123,7 +124,7 @@ body {
     height: 4vw;
     position: absolute;
     right: 1.5vw;
-    top:18vw
+    top:13vw
   }
   #status_img{
     width: 100%;
@@ -131,8 +132,8 @@ body {
   }
   #chart_data{
     position: absolute;
-    top:20vw;
-    left:5vw;
+    top: 20vw;
+    right: 2vw;
     width: 20vw;  
     height: 10vw; 
 }
