@@ -65,8 +65,8 @@ body {
 
 #speed_gauge-container {
     position: absolute;
-    bottom: 5vw;
-    left: 5vw;
+    bottom: 32vw;
+    left: -1vw;
     width: 18vw;
     height: 15vw;
     display: flex;
@@ -87,8 +87,8 @@ body {
 
   #heartrate_gauge-container {
     position: absolute;
-    bottom: 5vw;
-    left: 25vw;
+    bottom: 18vw;
+    left: -1vw;
     width: 18vw;
     height: 15vw;
     display: flex;

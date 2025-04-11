@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>动态调整分割百分比</title>
+<style>
+  .shape {
+    width: 512px;
+    height: 512px;
+    background: linear-gradient(to top, #4caf50 var(--percent), #f44336 var(--percent));
+    -webkit-mask-image: url('01.svg');
+    mask-image: url('01.svg');
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-mode: alpha;
+    mask-mode: alpha;
+    transition: background 0.3s;
+  }
+
+  body {
+    background: #eee;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+  }
+
+  input[type="range"] {
+    margin-top: 20px;
+    width: 300px;
+  }
+</style>
+</head>
+<body>
+
+<div class="shape" style="--percent: 50%;"></div>
+<input type="range" min="0" max="100" value="50" id="slider">
+
+<script>
+const slider = document.getElementById('slider');
+const shape = document.querySelector('.shape');
+
+slider.addEventListener('input', (e) => {
+  shape.style.setProperty('--percent', e.target.value + '%');
+});
+</script>
+
+</body>
+</html>
