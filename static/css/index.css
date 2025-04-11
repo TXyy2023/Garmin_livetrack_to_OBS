@@ -67,8 +67,8 @@ body {
     position: absolute;
     bottom: 5vw;
     left: 5vw;
-    width: 25vw;
-    height: 25vw;
+    width: 18vw;
+    height: 15vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -89,8 +89,8 @@ body {
     position: absolute;
     bottom: 5vw;
     left: 25vw;
-    width: 25vw;
-    height: 25vw;
+    width: 18vw;
+    height: 15vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -121,7 +121,7 @@ body {
     position: absolute;
     top: 20vw;
     right: 2vw;
-    width: 20vw;  
+    width: 15vw;
     height: 10vw; 
 }
 .hidden {
@@ -155,6 +155,11 @@ color: #666;
 #altitude{
   right: 4.5vw;
   top: 30vw;
+
+}
+#slope{
+  right: 4.5vw;
+  top: 32vw;
 
 }
  /* #map { 

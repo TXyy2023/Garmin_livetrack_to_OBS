@@ -47,7 +47,8 @@ function geo_add_data(lon, lat) {
 			lastTwo_lon_lat[1][0],
 			lastTwo_altitude[1]
 		);
-		console.log(result);
+		// console.log(result["slopeAngle"]);
+		document.getElementById("slope").textContent = `坡度: ${result["slopeAngle"]}`;
 	}
 	// console.log(geo_in_data_test.geometry.coordinates);
 	return geo_in_data_test; // 返回更新后的 geo_in_data
@@ -167,6 +168,7 @@ function init_map() {
 		// 	console.log("get in ");
 		// 	requestAnimationFrame(animate);
 		// }, 1000);
+
 		function animate() {
 			map.getSource("route").setData(geo_in_data_test);
 			// map.flyTo({
@@ -187,49 +189,70 @@ function init_map() {
 			requestAnimationFrame(animate);
 		}
 		animate();
+
+		setInterval(() => {
+			const bbox = turf.bbox(geo_in_data_test); // [minX, minY, maxX, maxY]
+			console.log(bbox);
+			map.fitBounds(
+				[
+					[bbox[0], bbox[1]],
+					[bbox[2], bbox[3]],
+				],
+				{
+					padding: 40,
+					maxZoom: 15,
+					duration: 1000,
+				}
+			);
+		}, 3000); // 3000 毫秒 = 3 秒
 		// map.getSource("route").setData(geo_in_data_test);
 	});
 }
 
 function init_gauge() {
 	var opts = {
-		angle: 0, // 0 = 完整圆
+		angle: 0.1, // 0 = 完整圆
 		lineWidth: 0.2,
-		radiusScale: 1,
+		radiusScale: 0.9,
 		pointer: {
 			length: 0.6,
-			strokeWidth: 0.04,
+			strokeWidth: 0.06,
 			color: "#000000",
 		},
-		limitMax: false,
+		limitMax: true,
 		limitMin: false,
-		colorStart: "#20538C",
-		colorStop: "#20538C",
+		colorStart: "#ec7063 ",
+		colorStop: "#f1c40f ",
 		strokeColor: "#E0E0E0",
 		generateGradient: true,
 		highDpiSupport: true,
 
 		// 添加 staticLabels
 		staticLabels: {
-			font: "12px sans-serif", // 刻度字体
+			font: "1vw sans-serif", // 刻度字体
 			labels: [0, 10, 20, 30, 40, 50, 60], // 需要显示的刻度值
 			color: "#000", // 刻度字体颜色
 			fractionDigits: 0, // 小数位数
 		},
 		renderTicks: {
 			divisions: 6,
-			divWidth: 1.1,
-			divLength: 0.7,
+			divWidth: 1.8,
+			divLength: 1.0,
 			divColor: "#333333",
 			subDivisions: 10,
 			subLength: 0.5,
 			subWidth: 0.6,
 			subColor: "#666666",
 		},
-		// 不需要 staticZones
-		// staticZones: []
+		// staticZones: [
+		// 	{strokeStyle: "#00C853", min: 0, max: 10}, // Red from 100 to 130
+		// 	{strokeStyle: "#64DD17", min: 10, max: 20}, // Yellow
+		// 	{strokeStyle: "#FFD600", min: 20, max: 30}, // Green
+		// 	{strokeStyle: "#FFAB00", min: 30, max: 40}, // Yellow
+		// 	{strokeStyle: "#FF5722", min: 40, max: 50},  // Red
+		// 	{strokeStyle: "#D50000", min: 50, max: 60}  // Red
+		// ],
 	};
-
 	var target = document.getElementById("speed_gauge");
 	gauge1 = new Gauge(target).setOptions(opts);
 
@@ -246,40 +269,47 @@ function init_gauge() {
 
 	var opts = {
 		angle: -0.25, // 0 = 完整圆
-		lineWidth: 0.2,
-		radiusScale: 1,
+		lineWidth: 0.18,
+		radiusScale: 0.8,
 		pointer: {
 			length: 0.6,
-			strokeWidth: 0.04,
+			strokeWidth: 0.025,
 			color: "#000000",
 		},
 		limitMax: false,
 		limitMin: false,
 		colorStart: "#20538C",
-		colorStop: "#20538C",
+		colorStop: "#ff4600",
 		strokeColor: "#E0E0E0",
 		generateGradient: true,
 		highDpiSupport: true,
 
 		// 添加 staticLabels
 		staticLabels: {
-			font: "12px sans-serif", // 刻度字体
+			font: "0.8vw sans-serif", // 刻度字体
 			labels: [0, 20, 40, 60, 80, 100, 120, 140, 160, 180, 200], // 需要显示的刻度值
 			color: "#000", // 刻度字体颜色
 			fractionDigits: 0, // 小数位数
 		},
 		renderTicks: {
 			divisions: 10,
-			divWidth: 1.1,
+			divWidth: 0.6,
 			divLength: 0.7,
 			divColor: "#333333",
 			subDivisions: 5,
 			subLength: 0.5,
-			subWidth: 0.6,
+			subWidth: 0.1,
 			subColor: "#666666",
 		},
 		// 不需要 staticZones
-		// staticZones: []
+		staticZones: [
+			{ strokeStyle: "#00B0FF", min: 0, max: 70 },
+			{ strokeStyle: "#00C853", min: 70, max: 100 },
+			{ strokeStyle: "#FFD600", min: 100, max: 140 },
+			{ strokeStyle: "#FF9100", min: 140, max: 160 },
+			{ strokeStyle: "#FF3D00", min: 160, max: 180 },
+			{ strokeStyle: "#D50000", min: 180, max: 200 },
+		],
 	};
 
 	var target = document.getElementById("heartrate_gauge");

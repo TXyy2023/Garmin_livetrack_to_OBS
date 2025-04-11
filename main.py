@@ -56,7 +56,7 @@ def generate_random_data():
         })
 
         counter+=1
-        time.sleep(2)
+        time.sleep(0.5)
 
 # 在连接时启动后台线程
 @socketio.on('connect')

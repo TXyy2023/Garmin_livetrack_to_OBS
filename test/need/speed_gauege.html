@@ -16,8 +16,8 @@
     position: absolute;
     bottom: 5vw;
     left: 5vw;
-    width: 25vw;
-    height: 25vw;
+    width: 18vw;
+    height: 15vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -44,41 +44,47 @@
 
 <script>
 	var opts = {
-		angle: 0, // 0 = 完整圆
+		angle: 0.1, // 0 = 完整圆
 		lineWidth: 0.2,
-		radiusScale: 1,
+		radiusScale: 0.9,
 		pointer: {
 			length: 0.6,
-			strokeWidth: 0.04,
+			strokeWidth: 0.06,
 			color: "#000000",
 		},
-		limitMax: false,
+		limitMax: true,
 		limitMin: false,
-		colorStart: "#20538C",
-		colorStop: "#20538C",
+		colorStart: "#ec7063 ",
+		colorStop: "#f1c40f ",
 		strokeColor: "#E0E0E0",
 		generateGradient: true,
 		highDpiSupport: true,
 
 		// 添加 staticLabels
 		staticLabels: {
-			font: "12px sans-serif", // 刻度字体
+			font: "1vw sans-serif", // 刻度字体
 			labels: [0, 10, 20, 30, 40, 50, 60], // 需要显示的刻度值
 			color: "#000", // 刻度字体颜色
 			fractionDigits: 0, // 小数位数
 		},
 		renderTicks: {
 			divisions: 6,
-			divWidth: 1.1,
-			divLength: 0.7,
+			divWidth: 1.8,
+			divLength: 1.0,
 			divColor: "#333333",
 			subDivisions: 10,
 			subLength: 0.5,
 			subWidth: 0.6,
 			subColor: "#666666",
 		},
-		// 不需要 staticZones
-		// staticZones: []
+		// staticZones: [
+		// 	{strokeStyle: "#00C853", min: 0, max: 10}, // Red from 100 to 130
+		// 	{strokeStyle: "#64DD17", min: 10, max: 20}, // Yellow
+		// 	{strokeStyle: "#FFD600", min: 20, max: 30}, // Green
+		// 	{strokeStyle: "#FFAB00", min: 30, max: 40}, // Yellow
+		// 	{strokeStyle: "#FF5722", min: 40, max: 50},  // Red
+		// 	{strokeStyle: "#D50000", min: 50, max: 60}  // Red
+		// ],
 	};
 
 	var target = document.getElementById("speed_gauge");
@@ -86,8 +92,8 @@
 
 	gauge1.maxValue = 60;
 	gauge1.setMinValue(0);
-	gauge1.animationSpeed = 32;
-
+	gauge1.animationSpeed = 128;
+	gauge1.strokeColor="#00c652";
 	// 初始设置
 	var currentValue = 25;
 	gauge1.set(currentValue);
@@ -95,8 +101,9 @@
 	// 同步显示上方的数值
 	document.getElementById("speed_gauge-value").innerText = currentValue;
   setInterval(() => {
-    currentValue = Math.floor(Math.random() * 201); // 随机值
-    gauge.set(currentValue);
+    currentValue =  parseFloat((Math.random() * 60).toFixed(2));
+    gauge1.set(currentValue);
+
     document.getElementById('speed_gauge-value').innerText = currentValue;
   }, 2000);
 </script>
