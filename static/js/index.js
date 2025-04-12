@@ -217,9 +217,9 @@ function init_map() {
 					pitch: 60, // 倾斜角度（60度）
 					duration: 2000, // 动画持续时间（3000毫秒）
 				});
-				// let timestamp = Date.now();
-				// console.log(timestamp); // 输出当前时间戳（毫秒）
-				runWhileFor2Seconds();
+
+				setTimeout(runWhileFor2Seconds, 2000);
+				// runWhileFor2Seconds();
 			}, 2000);
 			// map.easeTo({
 			// 	zoom: 14, // 新的缩放级别
@@ -238,7 +238,7 @@ function init_map() {
 				elapsedTime = Date.now() - startTime;
 
 				// 如果时间小于 2 秒，继续循环
-				if (elapsedTime < 2000) {
+				if (elapsedTime < 4000) {
 					console.log("Running...");
 					rotateCamera(elapsedTime);
 					setTimeout(loop, 5); // 每 10 毫秒检查一次
