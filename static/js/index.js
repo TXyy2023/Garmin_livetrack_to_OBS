@@ -58,6 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	init_line_gauge();
 	init_gauge();
 	init_time();
+	// init_map();
 	//   示例：动态更新数值
 	// setInterval(() => {
 	// 	currentValue = Math.floor(Math.random() * 201); // 随机值
@@ -113,8 +114,8 @@ function init_map() {
 		container: "map",
 		// Choose from Mapbox's core styles, or make your own style with Mapbox Studio
 		style: "mapbox://styles/mapbox/dark-v11",
-		// center: [116.141190771014, 40.2499238401651],
-		center: geo_in_data_test.geometry.coordinates[0],
+		center: [116.141190771014, 40.2499238401651],
+		// center: geo_in_data_test.geometry.coordinates[0],
 		zoom: 14,
 		attributionControl: false,
 
@@ -172,16 +173,18 @@ function init_map() {
 		// 	console.log("get in ");
 		// 	requestAnimationFrame(animate);
 		// }, 1000);
-
+		var is_showing = false;
 		function animate() {
 			map.getSource("route").setData(geo_in_data_test);
-
+			// console.log(map.getPitch());
 			// map.flyTo({
 			// 	center: geo_in_data_test.geometry.coordinates.at(-1),
 			// 	essential: true,
 			// });
+			if (is_showing == false) {
+				map.panTo(geo_in_data_test.geometry.coordinates.at(-1), { duration: 5 * 1000 });
+			}
 
-			// map.panTo(geo_in_data_test.geometry.coordinates.at(-1));
 			const last_point = geo_in_data_test.geometry.coordinates.at(-2);
 			const now_point = geo_in_data_test.geometry.coordinates.at(-1);
 
@@ -197,15 +200,16 @@ function init_map() {
 		animate();
 
 		setInterval(() => {
+			is_showing = true;
 			const bbox = turf.bbox(geo_in_data_test); // [minX, minY, maxX, maxY]
-			console.log(bbox);
+			// console.log(bbox);
 			map.fitBounds(
 				[
 					[bbox[0], bbox[1]],
 					[bbox[2], bbox[3]],
 				],
 				{
-					padding: 20,
+					padding: 40,
 					// maxZoom: 15,
 					duration: 1000,
 				}
@@ -215,21 +219,21 @@ function init_map() {
 				map.easeTo({
 					// bearing: map.getBearing() + 30, // 旋转角度（45度）
 					pitch: 60, // 倾斜角度（60度）
-					duration: 2000, // 动画持续时间（3000毫秒）
+					duration: 1000, // 动画持续时间（3000毫秒）
 				});
 
-				setTimeout(runWhileFor2Seconds, 2000);
+				setTimeout(runWhileForSeconds, 1050);
 				// runWhileFor2Seconds();
-			}, 2000);
+			}, 1050);
 			// map.easeTo({
 			// 	zoom: 14, // 新的缩放级别
 			// 	bearing: map.getBearing() + 1, // 旋转角度（45度）
 			// 	pitch: 60, // 倾斜角度（60度）
 			// 	duration: 50, // 动画持续时间（3000毫秒）
 			// });
-		}, 10000);
-
-		function runWhileFor2Seconds() {
+		}, 300 * 1000);
+		const rotate_time = 4000;
+		function runWhileForSeconds() {
 			let startTime = Date.now();
 			let elapsedTime = 0;
 
@@ -237,30 +241,33 @@ function init_map() {
 				// 计算经过的时间
 				elapsedTime = Date.now() - startTime;
 
-				// 如果时间小于 2 秒，继续循环
-				if (elapsedTime < 4000) {
-					console.log("Running...");
+				if (elapsedTime < rotate_time) {
+					// console.log("Running...");
 					rotateCamera(elapsedTime);
-					setTimeout(loop, 5); // 每 10 毫秒检查一次
+					setTimeout(loop, 2);
 					// loop();
 				} else {
-					console.log("Finished!");
+					// console.log("Finished!");
+					map.easeTo({
+						bearing: 0,
+						pitch: 0,
+						duration: 1500,
+					});
+					setTimeout(function () {
+						is_showing = false;
+					}, 1550);
 				}
 			}
 
 			loop();
 		}
 
-		function rotateCamera(timestamp) {
-			// clamp the rotation between 0 -360 degrees
-			// Divide timestamp by 100 to slow rotation to ~10 degrees / sec
-			// map.rotateTo((timestamp / 100) % 360, { duration: 0 });
-
+		function rotateCamera(elapsedTime) {
 			map.easeTo({
-				// bearing: map.getBearing() + 30, // 旋转角度（45度）
-				bearing: (timestamp / 10) % 360, // 旋转角度（45度）
-				pitch: 60, // 倾斜角度（60度）
-				duration: 5, // 动画持续时间（3000毫秒）
+				// center: geo_in_data_test.geometry.coordinates.at(-1),
+				bearing: (elapsedTime / rotate_time) * 360 * 1,
+				pitch: 60,
+				duration: 2,
 			});
 			// Request the next frame of the animation.
 			// requestAnimationFrame(rotateCamera);
