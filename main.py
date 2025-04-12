@@ -14,14 +14,6 @@ socketio = SocketIO(app)
 def generate_random_data():
     counter=0
     while True:
-
-        # print("get in")
-        # 随机生成数据
-        # speed = random.randint(0, 100)
-        # heart_rate = random.randint(60, 180)
-        # distance = random.randint(0, 100)
-        # elapsed_time = f"{random.randint(0, 99)}:{random.randint(10, 59)}:{random.randint(10, 59)}
-        # print(speed,heart_rate,distance,elapsed_time)
         print(counter)
         data=get_garmin_data(counter)
         speed=data["speed"]

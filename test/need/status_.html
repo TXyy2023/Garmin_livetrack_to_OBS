@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>动态调整分割百分比</title>
+<style>
+  .shape1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(calc(-50% - 6vw), -50%);
+    width: 5vw;
+    height: 11.43vw;
+    background: linear-gradient(to top, #2ecc71 var(--percent), #e5e8e8  var(--percent));
+    -webkit-mask-image: url('01.svg');
+    mask-image: url('01.svg');
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-mode: alpha;
+    mask-mode: alpha;
+    transition: background 0.3s;
+  }
+  .shape2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(calc(-50% + 6vw), -50%);
+    width: 5vw;
+    height: 11.43vw;
+    background: linear-gradient(to top, #f7dc6f  var(--percent), #e5e8e8  var(--percent));
+    -webkit-mask-image: url('02.svg');
+    mask-image: url('02.svg');
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-mode: alpha;
+    mask-mode: alpha;
+    transition: background 0.3s;
+  }
+
+
+  body {
+    background: #eee;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+  }
+
+  input[type="range"] {
+    margin-top: 20px;
+    width: 300px;
+  }
+  #slider{
+    position: absolute;
+    bottom: 5vw;
+  }
+  #slider2{
+    position: absolute;
+    bottom: 10vw;
+  }
+  .crosshair {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px; /* 横向长度 */
+  height: 20px; /* 纵向长度 */
+  transform: translate(-50%, -50%); /* 真正居中 */
+}
+
+.crosshair::before,
+.crosshair::after {
+  content: "";
+  position: absolute;
+  background: black; /* 准星颜色 */
+}
+
+/* 横线 */
+.crosshair::before {
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px; /* 线条粗细 */
+  transform: translateY(-50%);
+}
+
+/* 竖线 */
+.crosshair::after {
+  left: 50%;
+  top: 0;
+  width: 2px; /* 线条粗细 */
+  height: 100%;
+  transform: translateX(-50%);
+}
+
+</style>
+</head>
+<body>
+
+<div class="shape1" style="--percent: 50%;"></div>
+
+<div class="shape2" style="--percent: 50%;"></div>
+<div class="crosshair"></div>
+
+
+<input type="range" min="0" max="100" value="50" id="slider">
+<input type="range" min="0" max="100" value="50" id="slider2">
+<script>
+const slider = document.getElementById('slider');
+const slider2 = document.getElementById('slider2');
+const shape = document.querySelector('.shape1');
+const shape2 = document.querySelector('.shape2');
+slider.addEventListener('input', (e) => {
+  shape.style.setProperty('--percent', e.target.value + '%');
+  console.log(e.target.value)
+});
+slider2.addEventListener('input', (e) => {
+  shape2.style.setProperty('--percent', e.target.value + '%');
+});
+</script>
+
+</body>
+</html>

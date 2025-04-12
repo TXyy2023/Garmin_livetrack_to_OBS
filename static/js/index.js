@@ -98,6 +98,10 @@ document.addEventListener("DOMContentLoaded", function () {
 		chart.update(); // 刷新图表
 
 		geo_add_data(parseFloat(data.lon), parseFloat(data.lat));
+		const shape1 = document.querySelector(".shape1");
+		shape1.style.setProperty("--percent", parseInt((parseFloat(data.speed) / 60) * 100) + "%");
+		const shape2 = document.querySelector(".shape2");
+		shape2.style.setProperty("--percent", parseInt((parseInt(data.heart_rate) / 200) * 100) + "%");
 	});
 });
 
@@ -171,11 +175,13 @@ function init_map() {
 
 		function animate() {
 			map.getSource("route").setData(geo_in_data_test);
+
 			// map.flyTo({
 			// 	center: geo_in_data_test.geometry.coordinates.at(-1),
 			// 	essential: true,
 			// });
-			map.panTo(geo_in_data_test.geometry.coordinates.at(-1));
+
+			// map.panTo(geo_in_data_test.geometry.coordinates.at(-1));
 			const last_point = geo_in_data_test.geometry.coordinates.at(-2);
 			const now_point = geo_in_data_test.geometry.coordinates.at(-1);
 
@@ -199,12 +205,66 @@ function init_map() {
 					[bbox[2], bbox[3]],
 				],
 				{
-					padding: 40,
-					maxZoom: 15,
+					padding: 20,
+					// maxZoom: 15,
 					duration: 1000,
 				}
 			);
-		}, 3000); // 3000 毫秒 = 3 秒
+			// setTimeout(rotate_show, 2000);
+			setTimeout(function () {
+				map.easeTo({
+					// bearing: map.getBearing() + 30, // 旋转角度（45度）
+					pitch: 60, // 倾斜角度（60度）
+					duration: 2000, // 动画持续时间（3000毫秒）
+				});
+				// let timestamp = Date.now();
+				// console.log(timestamp); // 输出当前时间戳（毫秒）
+				runWhileFor2Seconds();
+			}, 2000);
+			// map.easeTo({
+			// 	zoom: 14, // 新的缩放级别
+			// 	bearing: map.getBearing() + 1, // 旋转角度（45度）
+			// 	pitch: 60, // 倾斜角度（60度）
+			// 	duration: 50, // 动画持续时间（3000毫秒）
+			// });
+		}, 10000);
+
+		function runWhileFor2Seconds() {
+			let startTime = Date.now();
+			let elapsedTime = 0;
+
+			function loop() {
+				// 计算经过的时间
+				elapsedTime = Date.now() - startTime;
+
+				// 如果时间小于 2 秒，继续循环
+				if (elapsedTime < 2000) {
+					console.log("Running...");
+					rotateCamera(elapsedTime);
+					setTimeout(loop, 5); // 每 10 毫秒检查一次
+					// loop();
+				} else {
+					console.log("Finished!");
+				}
+			}
+
+			loop();
+		}
+
+		function rotateCamera(timestamp) {
+			// clamp the rotation between 0 -360 degrees
+			// Divide timestamp by 100 to slow rotation to ~10 degrees / sec
+			// map.rotateTo((timestamp / 100) % 360, { duration: 0 });
+
+			map.easeTo({
+				// bearing: map.getBearing() + 30, // 旋转角度（45度）
+				bearing: (timestamp / 10) % 360, // 旋转角度（45度）
+				pitch: 60, // 倾斜角度（60度）
+				duration: 5, // 动画持续时间（3000毫秒）
+			});
+			// Request the next frame of the animation.
+			// requestAnimationFrame(rotateCamera);
+		}
 		// map.getSource("route").setData(geo_in_data_test);
 	});
 }
@@ -390,33 +450,6 @@ function init_line_gauge() {
 			},
 		},
 	});
-
-	// 模拟每秒钟接收新的数据
-	let time = 0;
-	// setInterval(() => {
-	// 	// 模拟的实时数据（这里使用正弦函数作为示例）
-	// 	//   const newData = Math.sin(time * 0.1) * 10 + 50;
-	// 	const newData = Math.floor(Math.random() * 101); // 随机值
-	// 	// 更新数据点
-
-	// 	dataPoints.push(newData);
-	// 	//   timeLabels.push(time);
-	// 	// 限制最多显示20个数据点，超出则删除最老的数据
-	// 	if (dataPoints.length >= data_length) {
-	// 		// timeLabels.shift();
-	// 		dataPoints.shift();
-	// 	}
-
-	// 	//   console.log(dataPoints.length)
-	// 	console.log(dataPoints);
-
-	// 	// 更新图表数据
-	// 	//   chart.data.labels = timeLabels;
-	// 	chart.data.datasets[0].data = dataPoints;
-	// 	chart.update(); // 刷新图表
-
-	// 	time++; // 时间递增
-	// }, 200); // 每秒更新一次数据
 }
 
 function init_time() {

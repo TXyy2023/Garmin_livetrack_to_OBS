@@ -1,55 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<title>动态调整分割百分比</title>
-<style>
-  .shape {
-    width: 512px;
-    height: 512px;
-    background: linear-gradient(to top, #4caf50 var(--percent), #f44336 var(--percent));
-    -webkit-mask-image: url('01.svg');
-    mask-image: url('01.svg');
-    -webkit-mask-size: cover;
-    mask-size: cover;
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat;
-    -webkit-mask-position: center;
-    mask-position: center;
-    -webkit-mask-mode: alpha;
-    mask-mode: alpha;
-    transition: background 0.3s;
-  }
-
-  body {
-    background: #eee;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
-  }
-
-  input[type="range"] {
-    margin-top: 20px;
-    width: 300px;
-  }
-</style>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapbox Demo</title>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css" rel="stylesheet" />
+    <style>
+        #map {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
 </head>
 <body>
+    <div id="map"></div>
 
-<div class="shape" style="--percent: 50%;"></div>
-<input type="range" min="0" max="100" value="50" id="slider">
+    <script>
+        mapboxgl.accessToken ="pk.eyJ1IjoiYmJuZHNrb3dlIiwiYSI6ImNtOHhzc2xwdTA5MzAyanIzOHQwdmY4Z3gifQ.PCVJZBjlDOnQIvsADOaVaQ";
+        const map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/streets-v11',
+            center: [116.141190771014, 40.2499238401651],  // 默认经纬度
+            zoom: 3,  // 默认缩放
+        });
 
-<script>
-const slider = document.getElementById('slider');
-const shape = document.querySelector('.shape');
+        let pitch = 0;  // 初始倾斜度
+        let bearing = 0;  // 初始方向
 
-slider.addEventListener('input', (e) => {
-  shape.style.setProperty('--percent', e.target.value + '%');
-});
-</script>
+        function animateMap() {
+            // 每一帧修改pitch和bearing的值
+            pitch = (pitch + 0.1) % 60;  // 每次增加0.1度，最大为60度
+            bearing = (bearing + 0.1) % 360;  // 每次增加0.1度，最大为360度
 
+            // 动态设置地图的pitch和bearing
+            map.setPitch(pitch);
+            map.setBearing(bearing);
+
+            // 使用requestAnimationFrame保持动画效果
+            requestAnimationFrame(animateMap);
+        }
+
+        // 当地图加载完成后启动动画
+        map.on('load', function () {
+            animateMap();
+        });
+    </script>
 </body>
 </html>
