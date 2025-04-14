@@ -244,33 +244,6 @@ function init_map() {
 			requestAnimationFrame(animate);
 		}
 		animate();
-		function animateMapbox() {
-			const mapbox = document.getElementById("map");
-			mapbox.style.transition = "all 1s ease-in-out";
-			mapbox.style.width = "25vw";
-			mapbox.style.height = "25vw";
-
-			// 动画期间不停调用 map.resize()
-			const resizeInterval = setInterval(() => {
-				map.resize();
-			}, 30); // 每30ms刷新一次
-
-			setTimeout(() => {
-				clearInterval(resizeInterval); // 1秒后停止刷新
-
-				// 准备缩回
-				mapbox.style.width = "18vw";
-				mapbox.style.height = "18vw";
-
-				const shrinkInterval = setInterval(() => {
-					map.resize();
-				}, 30);
-
-				setTimeout(() => {
-					clearInterval(shrinkInterval);
-				}, 1000);
-			}, 5100);
-		}
 
 		// const observer = new ResizeObserver(() => {
 		// 	map.resize();
@@ -301,8 +274,8 @@ function init_map() {
 					// bearing: map.getBearing() + 30, // 旋转角度（45度）
 					// zoom: 5,
 					center: rotate_center,
-					pitch: 60, // 倾斜角度（60度）
-					duration: 1000, // 动画持续时间（3000毫秒）
+					pitch: 60,
+					duration: 1000,
 				});
 
 				setTimeout(runWhileForSeconds, 1050);
@@ -346,7 +319,6 @@ function init_map() {
 
 			loop();
 		}
-
 		function rotateCamera(elapsedTime) {
 			map.easeTo({
 				// center: geo_in_data_test.geometry.coordinates.at(-1),
@@ -357,6 +329,33 @@ function init_map() {
 			});
 			// Request the next frame of the animation.
 			// requestAnimationFrame(rotateCamera);
+		}
+		function animateMapbox() {
+			const mapbox = document.getElementById("map");
+			mapbox.style.transition = "all 1s ease-in-out";
+			mapbox.style.width = "25vw";
+			mapbox.style.height = "25vw";
+
+			// 动画期间不停调用 map.resize()
+			const resizeInterval = setInterval(() => {
+				map.resize();
+			}, 30); // 每30ms刷新一次
+
+			setTimeout(() => {
+				clearInterval(resizeInterval); // 1秒后停止刷新
+
+				// 准备缩回
+				mapbox.style.width = "18vw";
+				mapbox.style.height = "18vw";
+
+				const shrinkInterval = setInterval(() => {
+					map.resize();
+				}, 30);
+
+				setTimeout(() => {
+					clearInterval(shrinkInterval);
+				}, 1000);
+			}, 5100);
 		}
 		// map.getSource("route").setData(geo_in_data_test);
 	});
