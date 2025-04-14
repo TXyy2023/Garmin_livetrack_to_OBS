@@ -120,12 +120,58 @@ function init_map() {
 		attributionControl: false,
 
 		// 下面这些是交互设置（如果你要确保能缩放平移，可以这样写）
-		dragPan: true, // 允许拖动地图平移
-		scrollZoom: true, // 允许滚轮缩放
-		doubleClickZoom: true, // 双击缩放
-		touchZoomRotate: true, // 触摸屏缩放旋转
-		keyboard: true, // 键盘控制（上下左右、+-缩放）
+		// dragPan: true, // 允许拖动地图平移
+		// scrollZoom: true, // 允许滚轮缩放
+		// doubleClickZoom: true, // 双击缩放
+		// touchZoomRotate: true, // 触摸屏缩放旋转
+		// keyboard: true, // 键盘控制（上下左右、+-缩放）
 	});
+
+	fetch("/static/GPX/01.gpx")
+		.then((response) => response.text())
+		.then((gpxText) => {
+			const parser = new DOMParser();
+			const xmlDoc = parser.parseFromString(gpxText, "application/xml");
+
+			// 转换为 GeoJSON
+			const geojson = toGeoJSON.gpx(xmlDoc);
+			console.log("转换后的 GeoJSON:", geojson);
+
+			// 添加轨迹到地图
+			map.addSource("gpxRoute", {
+				type: "geojson",
+				data: geojson,
+			});
+
+			map.addLayer({
+				id: "routeLine",
+				type: "line",
+				source: "gpxRoute",
+				layout: {
+					"line-join": "round",
+					"line-cap": "round",
+				},
+				paint: {
+					"line-color": "#ff0000",
+					"line-width": 4,
+				},
+			});
+
+			// 调整视图，使地图适应轨迹范围
+			const bounds = new mapboxgl.LngLatBounds();
+			geojson.features.forEach((feature) => {
+				feature.geometry.coordinates.forEach((coord) => {
+					bounds.extend(coord);
+				});
+			});
+
+			if (!bounds.isEmpty()) {
+				map.fitBounds(bounds, { padding: 20 });
+			}
+		})
+		.catch((error) => {
+			console.error("加载 GPX 文件失败:", error);
+		});
 
 	map.on("load", () => {
 		map.addSource("route", {
@@ -182,7 +228,7 @@ function init_map() {
 			// 	essential: true,
 			// });
 			if (is_showing == false) {
-				map.panTo(geo_in_data_test.geometry.coordinates.at(-1), { duration: 5 * 1000 });
+				map.panTo(geo_in_data_test.geometry.coordinates.at(-1), { duration: 1 * 1000 });
 			}
 
 			const last_point = geo_in_data_test.geometry.coordinates.at(-2);
@@ -198,8 +244,42 @@ function init_map() {
 			requestAnimationFrame(animate);
 		}
 		animate();
+		function animateMapbox() {
+			const mapbox = document.getElementById("map");
+			mapbox.style.transition = "all 1s ease-in-out";
+			mapbox.style.width = "25vw";
+			mapbox.style.height = "25vw";
+
+			// 动画期间不停调用 map.resize()
+			const resizeInterval = setInterval(() => {
+				map.resize();
+			}, 30); // 每30ms刷新一次
+
+			setTimeout(() => {
+				clearInterval(resizeInterval); // 1秒后停止刷新
+
+				// 准备缩回
+				mapbox.style.width = "18vw";
+				mapbox.style.height = "18vw";
+
+				const shrinkInterval = setInterval(() => {
+					map.resize();
+				}, 30);
+
+				setTimeout(() => {
+					clearInterval(shrinkInterval);
+				}, 1000);
+			}, 5100);
+		}
+
+		// const observer = new ResizeObserver(() => {
+		// 	map.resize();
+		// });
+		// observer.observe(document.getElementById("map"));
 
 		setInterval(() => {
+			var rotate_center;
+			animateMapbox();
 			is_showing = true;
 			const bbox = turf.bbox(geo_in_data_test); // [minX, minY, maxX, maxY]
 			// console.log(bbox);
@@ -214,10 +294,13 @@ function init_map() {
 					duration: 1000,
 				}
 			);
+			rotate_center = map.getCenter();
 			// setTimeout(rotate_show, 2000);
 			setTimeout(function () {
 				map.easeTo({
 					// bearing: map.getBearing() + 30, // 旋转角度（45度）
+					// zoom: 5,
+					center: rotate_center,
 					pitch: 60, // 倾斜角度（60度）
 					duration: 1000, // 动画持续时间（3000毫秒）
 				});
@@ -231,7 +314,7 @@ function init_map() {
 			// 	pitch: 60, // 倾斜角度（60度）
 			// 	duration: 50, // 动画持续时间（3000毫秒）
 			// });
-		}, 300 * 1000);
+		}, 10 * 1000);
 		const rotate_time = 4000;
 		function runWhileForSeconds() {
 			let startTime = Date.now();
@@ -249,8 +332,10 @@ function init_map() {
 				} else {
 					// console.log("Finished!");
 					map.easeTo({
+						center: geo_in_data_test.geometry.coordinates.at(-1),
 						bearing: 0,
 						pitch: 0,
+						zoom: 14,
 						duration: 1500,
 					});
 					setTimeout(function () {
@@ -265,6 +350,7 @@ function init_map() {
 		function rotateCamera(elapsedTime) {
 			map.easeTo({
 				// center: geo_in_data_test.geometry.coordinates.at(-1),
+				// center: rotate_center,
 				bearing: (elapsedTime / rotate_time) * 360 * 1,
 				pitch: 60,
 				duration: 2,

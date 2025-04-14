@@ -23,11 +23,15 @@
             height: 500px;
             margin-top: 20px;
         }
+        #gpxFileInput {
+            margin-bottom: 10px;
+        }
     </style>
 </head>
 <body>
 
-    <h2>预加载 static/GPX/01.gpx 文件并显示 (Mapbox)</h2>
+    <h2>GPX 文件转换为 GeoJSON 并可视化 (Mapbox)</h2>
+    <input type="file" id="gpxFileInput" accept=".gpx">
     
     <!-- 显示 Mapbox 地图 -->
     <div id="map"></div>
@@ -44,10 +48,14 @@
             zoom: 10 // 初始缩放级别
         });
 
-        // 页面加载后自动加载 GPX 文件
-        fetch('static/GPX/01.gpx')
-            .then(response => response.text())
-            .then(gpxText => {
+        // 监听 GPX 文件上传
+        document.getElementById("gpxFileInput").addEventListener("change", function(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                const gpxText = e.target.result;
                 const parser = new DOMParser();
                 const xmlDoc = parser.parseFromString(gpxText, "application/xml");
 
@@ -55,7 +63,13 @@
                 const geojson = toGeoJSON.gpx(xmlDoc);
                 console.log("转换后的 GeoJSON:", geojson);
 
-                // 添加轨迹到地图
+                // 移除旧数据（如果已存在）
+                if (map.getSource("gpxRoute")) {
+                    map.removeLayer("routeLine");
+                    map.removeSource("gpxRoute");
+                }
+
+                // 添加新轨迹到地图
                 map.addSource("gpxRoute", {
                     type: "geojson",
                     data: geojson
@@ -86,10 +100,10 @@
                 if (!bounds.isEmpty()) {
                     map.fitBounds(bounds, { padding: 20 });
                 }
-            })
-            .catch(error => {
-                console.error("加载 GPX 文件失败:", error);
-            });
+            };
+
+            reader.readAsText(file);
+        });
     </script>
 
 </body>
