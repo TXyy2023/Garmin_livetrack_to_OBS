@@ -168,7 +168,9 @@ color: #666;
 #altitude{
   right: 4.5vw;
   top: 30vw;
-
+}
+#altitude_datas{
+  transition: transform 1s ease-in-out;
 }
 #slope{
   right: 4.5vw;

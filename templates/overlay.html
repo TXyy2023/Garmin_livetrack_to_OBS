@@ -61,12 +61,14 @@
         <img src="{{ url_for('static', filename='img/cycling.svg') }}" id="status_img">
     </div>
 
-    <div class="corner-text" id="altitude">altitude: 100m</div>
-    <div class="corner-text" id="slope">slope:</div>
-    <div id="chart_data">
-        <canvas id="myChart"></canvas>
+
+    <div id="altitude_datas">
+        <div class="corner-text" id="altitude">altitude: 100m</div>
+        <div class="corner-text" id="slope">slope:</div>
+        <div id="chart_data">
+            <canvas id="myChart"></canvas>
+        </div>
     </div>
-    
     <div class="hidden" id="cf_status">
         <div class="shape1" style="--percent: 50%;"></div>
         <div class="shape2" style="--percent: 50%;"></div>

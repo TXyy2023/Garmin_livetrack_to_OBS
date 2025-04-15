@@ -336,6 +336,8 @@ function init_map() {
 			mapbox.style.width = "25vw";
 			mapbox.style.height = "25vw";
 
+			const altitude_datas = document.getElementById("altitude_datas");
+			altitude_datas.style.transform = "translateY(-8vw)";
 			// 动画期间不停调用 map.resize()
 			const resizeInterval = setInterval(() => {
 				map.resize();
@@ -347,7 +349,7 @@ function init_map() {
 				// 准备缩回
 				mapbox.style.width = "18vw";
 				mapbox.style.height = "18vw";
-
+				altitude_datas.style.transform = "translateY(0)";
 				const shrinkInterval = setInterval(() => {
 					map.resize();
 				}, 30);
