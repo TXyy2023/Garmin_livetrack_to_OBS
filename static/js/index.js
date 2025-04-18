@@ -127,53 +127,53 @@ function init_map() {
 		// keyboard: true, // 键盘控制（上下左右、+-缩放）
 	});
 
-	fetch("/static/GPX/01.gpx")
-		.then((response) => response.text())
-		.then((gpxText) => {
-			const parser = new DOMParser();
-			const xmlDoc = parser.parseFromString(gpxText, "application/xml");
-
-			// 转换为 GeoJSON
-			const geojson = toGeoJSON.gpx(xmlDoc);
-			console.log("转换后的 GeoJSON:", geojson);
-
-			// 添加轨迹到地图
-			map.addSource("gpxRoute", {
-				type: "geojson",
-				data: geojson,
-			});
-
-			map.addLayer({
-				id: "routeLine",
-				type: "line",
-				source: "gpxRoute",
-				layout: {
-					"line-join": "round",
-					"line-cap": "round",
-				},
-				paint: {
-					"line-color": "#ff0000",
-					"line-width": 4,
-				},
-			});
-
-			// 调整视图，使地图适应轨迹范围
-			const bounds = new mapboxgl.LngLatBounds();
-			geojson.features.forEach((feature) => {
-				feature.geometry.coordinates.forEach((coord) => {
-					bounds.extend(coord);
-				});
-			});
-
-			if (!bounds.isEmpty()) {
-				map.fitBounds(bounds, { padding: 20 });
-			}
-		})
-		.catch((error) => {
-			console.error("加载 GPX 文件失败:", error);
-		});
-
 	map.on("load", () => {
+		fetch("static/GPX/01.gpx")
+			.then((response) => response.text())
+			.then((gpxText) => {
+				const parser = new DOMParser();
+				const xmlDoc = parser.parseFromString(gpxText, "application/xml");
+
+				// 转换为 GeoJSON
+				const geojson = toGeoJSON.gpx(xmlDoc);
+				console.log("转换后的 GeoJSON:", geojson);
+
+				// 添加轨迹到地图
+				map.addSource("gpxRoute", {
+					type: "geojson",
+					data: geojson,
+				});
+
+				map.addLayer({
+					id: "routeLine",
+					type: "line",
+					source: "gpxRoute",
+					layout: {
+						"line-join": "round",
+						"line-cap": "round",
+					},
+					paint: {
+						"line-color": "#ff0000",
+						"line-width": 4,
+					},
+				});
+
+				// 调整视图，使地图适应轨迹范围
+				const bounds = new mapboxgl.LngLatBounds();
+				geojson.features.forEach((feature) => {
+					feature.geometry.coordinates.forEach((coord) => {
+						bounds.extend(coord);
+					});
+				});
+
+				if (!bounds.isEmpty()) {
+					map.fitBounds(bounds, { padding: 20 });
+				}
+			})
+			.catch((error) => {
+				console.error("加载 GPX 文件失败:", error);
+			});
+
 		map.addSource("route", {
 			type: "geojson",
 			data: geo_in_data_test,
@@ -181,6 +181,20 @@ function init_map() {
 		map.addSource("point", {
 			type: "geojson",
 			data: point_pos,
+		});
+
+		map.addLayer({
+			id: "route",
+			type: "line",
+			source: "route",
+			layout: {
+				"line-join": "round",
+				"line-cap": "round",
+			},
+			paint: {
+				"line-color": "#888",
+				"line-width": 8,
+			},
 		});
 		map.addLayer({
 			id: "point",
@@ -200,19 +214,9 @@ function init_map() {
 				"icon-ignore-placement": true,
 			},
 		});
-		map.addLayer({
-			id: "route",
-			type: "line",
-			source: "route",
-			layout: {
-				"line-join": "round",
-				"line-cap": "round",
-			},
-			paint: {
-				"line-color": "#888",
-				"line-width": 8,
-			},
-		});
+		setTimeout(function () {
+			map.moveLayer("routeLine", "route");
+		}, 500);
 
 		// setInterval(async () => {
 		// 	map.getSource("route").setData(geo_in_data_test);
