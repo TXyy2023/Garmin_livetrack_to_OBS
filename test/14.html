@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片轮播</title>
+    <style>
+        #carousel {
+            width: 500px;
+            height: 300px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        #carousel img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            transition: opacity 1s;
+        }
+
+        .hidden {
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+
+<div id="carousel">
+    <img src="../static/img/01.svg" alt="Image 1" class="carousel-image">
+    <img src="../static/img/02.svg" alt="Image 2" class="carousel-image hidden">
+    <img src="../static/img/01.svg" alt="Image 3" class="carousel-image hidden">
+</div>
+
+<script>
+    let currentIndex = 0;
+    const images = document.querySelectorAll("#carousel img");
+
+    function showNextImage() {
+        images[currentIndex].classList.add("hidden");
+        currentIndex = (currentIndex + 1) % images.length;
+        images[currentIndex].classList.remove("hidden");
+    }
+
+    setInterval(showNextImage, 2000);  // 每2秒切换一次图片
+</script>
+
+</body>
+</html>

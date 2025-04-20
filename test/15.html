@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>轮播图效果</title>
+    <style>
+        #carousel {
+            width: 500px;
+            height: 300px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .carousel-images {
+            display: flex;
+            transition: transform 1s ease-in-out;
+        }
+
+        .carousel-images img {
+            width: 500px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="carousel">
+    <div class="carousel-images">
+        <img src="../static/img/01.JPG" alt="Image 1">
+        <img src="../static/img/02.JPG" alt="Image 2">
+        <img src="../static/img/03.JPG" alt="Image 3">
+    </div>
+</div>
+
+<script>
+    let currentIndex = 0;
+    const images = document.querySelector('.carousel-images');
+    const totalImages = document.querySelectorAll('.carousel-images img').length;
+
+    function showNextImage() {
+        currentIndex = (currentIndex + 1) % totalImages;
+        images.style.transform = `translateX(-${currentIndex * 500}px)`;  // 滑动500px
+    }
+
+    setInterval(showNextImage, 2000);  // 每2秒切换一次图片
+</script>
+
+</body>
+</html>
