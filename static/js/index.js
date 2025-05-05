@@ -58,6 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	init_line_gauge();
 	init_gauge();
 	init_time();
+	init_Ad();
 	// init_map();
 	//   示例：动态更新数值
 	// setInterval(() => {
@@ -566,6 +567,58 @@ function init_time() {
 	setInterval(updateClock, 1000);
 	updateClock(); // 初始运行一次
 }
+
+function init_Ad() {
+	let scaleRatio = 1; // 可调节缩放比例
+	const baseWidth = 22.5; // vw
+	const baseHeight = 10; // vw
+	let currentIndex = 0;
+	const imageContainer = document.querySelector(".carousel-images");
+	imageContainer.innerHTML += imageContainer.innerHTML; // 复制一遍实现无缝
+	const images = document.querySelector(".carousel-images");
+	const totalImages = document.querySelectorAll(".carousel-images img").length / 2;
+
+	function randomFloat(min, max) {
+		return Math.random() * (max - min) + min;
+	}
+
+	let ad_flash_counter = 0;
+	function resizeCanvas() {
+		if (ad_flash_counter > 1) {
+			ad_flash_counter = 0;
+			scaleRatio = randomFloat(1.5, 2);
+			const carousel = document.getElementById("carousel");
+			carousel.style.width = `${baseWidth * scaleRatio}vw`;
+			carousel.style.height = `${baseHeight * scaleRatio}vw`;
+
+			images.style.transition = "none";
+			images.style.transform = `translateX(0px)`;
+			currentIndex = 0;
+		}
+	}
+
+	function showNextImage() {
+		// scaleRatio=1.2
+		resizeCanvas();
+		currentIndex++;
+		images.style.transition = "transform 1s ease-in-out";
+		const containerWidth = document.getElementById("carousel").offsetWidth;
+		const scaledWidth = containerWidth;
+		images.style.transform = `translateX(-${currentIndex * scaledWidth}px)`;
+
+		if (currentIndex === totalImages) {
+			ad_flash_counter++;
+			setTimeout(() => {
+				images.style.transition = "none";
+				images.style.transform = `translateX(0px)`;
+				currentIndex = 0;
+				resizeCanvas();
+			}, 1000);
+		}
+	}
+	setInterval(showNextImage, 2000);
+}
+
 function toRadians(degrees) {
 	return (degrees * Math.PI) / 180;
 }
