@@ -584,7 +584,7 @@ function init_Ad() {
 
 	let ad_flash_counter = 0;
 	function resizeCanvas() {
-		if (ad_flash_counter > 1) {
+		if (ad_flash_counter > 20) {
 			ad_flash_counter = 0;
 			scaleRatio = randomFloat(1.5, 2);
 			const carousel = document.getElementById("carousel");
@@ -616,7 +616,7 @@ function init_Ad() {
 			}, 1000);
 		}
 	}
-	setInterval(showNextImage, 2000);
+	setInterval(showNextImage, 4000);
 }
 
 function toRadians(degrees) {
